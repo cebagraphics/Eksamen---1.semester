@@ -1,0 +1,251 @@
+:root { 
+  --sort: #1B1C1D; 
+  --hvid: #FAFAF9;
+  --rød: #ff2300;
+  --blå: #2838D2;
+  overscroll-behavior: none;
+  overflow-x: hidden;
+  } 
+
+  html {
+    font-size: 100%;
+    background-color: var(--hvid);
+    margin-top: 11%;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: aileron, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 800%;
+  color: var(--sort);
+  padding-left: 7%;
+  margin-bottom: auto;
+  margin: 0;
+  float: left;
+}
+
+h2 {
+  font-family: aileron, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 800%;
+  color: var(--sort);
+  padding-right: 7%;
+  padding-top: 10%;
+  margin-bottom: auto;
+  margin: 0;
+  float: right;
+  text-align: right;
+}
+
+h3 {
+  font-family: "swear-display", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 250%;
+  float: left;
+  padding-left: 38%;
+  margin: 0;
+}
+
+h4 {
+  font-family: "swear-display", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 250%;
+  padding-right: 48%;
+  padding-bottom: 5%;
+  float: right;
+  margin: 0;
+}
+
+.arrow img {
+  width: 8%;
+  margin: 0;
+  float: left;
+  padding-top: 25%;
+}
+
+
+.mig {
+  float: left;
+  width: 35%;
+  font-family: source-sans-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 160%;
+  line-height: 1.5;
+  color: var(--sort);
+  padding-left: 7.5%;
+  padding-top: 5%;
+}
+
+.portrætter img {
+  width: 35%;
+  rotate: 7deg;
+  float: right;
+  padding: 7% 7% 2% 7%;
+  display: none;
+}
+
+.portrætter img.active {
+  width: 35%;
+  rotate: 7deg;
+  float: right;
+  padding: 7% 7% 2% 7%;
+  display: block;
+}
+
+.trebeskrivelse {
+  float: left;
+  padding-top: 10%;
+  padding-left: 7%;
+  margin-bottom: auto;
+  margin: 0;
+}
+
+.trebeskrivelse h2{
+  font-family: aileron, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 500%;
+  color: var(--sort);
+}
+
+.trebeskrivelse p {
+  font-family: source-sans-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 160%;
+  margin: 0;
+}
+
+.trekasser {
+  float: left;
+  padding-left: 1.5%;
+}
+
+.kasse1 {
+  float: left;
+  background-color: var(--blå);
+  border: 5px solid var(--blå);
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  color: var(--hvid);
+  font-family: aileron, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+  margin: 80px;
+}
+
+.kasse2 {
+  float: left;
+  background-color: var(--hvid);
+  border: 5px solid var(--blå);
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  color: var(--blå);
+  font-family: aileron, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+  margin: 80px;
+}
+
+.kasse3 {
+  float: right;
+  background-color: var(--blå);
+  border: 5px solid var(--blå);
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  color: var(--hvid);
+  font-family: aileron, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+  margin: 80px;
+}
+
+.hobby {
+  float: right;
+  width: 36%;
+  font-family: source-sans-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 160%;
+  line-height: 1.5;
+  color: var(--sort);
+  padding-right: 7.5%;
+  padding-top: 5%;
+  text-align: right;
+}
+
+/* =============== NAVIGATION BAR =============== */
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(252, 252, 250, 0); /* Lav opacitet */
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  padding: 10px 20px 0px 20px;
+}
+
+.menu ul {
+  margin: 0;
+  padding-left: 580px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  font-family: aileron, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  list-style: none;
+  letter-spacing: 1px;
+}
+
+.menu li a {
+  display: block;
+  display: grid;
+  color: var(--sort);
+  text-align: center;
+  padding: 18px 40px;
+  text-decoration-line: underline;
+  font-size: 16px;
+}
+
+.menu li a:hover {
+  font-family: "swear-display", serif;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: lowercase;
+  font-size: 21px;
+  color: var(--sort);
+  text-decoration-line: none;
+  transition: font-family 1.2s ease;
+}
+
+.hover-text:hover {
+  font-size: 10px;
+}
+
+.logo img {
+  height: 80px;
+  float: left;
+  padding-left: 15px;
+}
+

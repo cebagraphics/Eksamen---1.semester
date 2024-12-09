@@ -1,0 +1,309 @@
+:root { 
+    --sort: #1B1C1D; 
+    --hvid: #FAFAF9;
+    --rød: #ff2300;
+    --blå: #2838D2;
+    overscroll-behavior: none;
+    overflow-x: hidden;
+    } 
+
+html {
+    font-size: 100%;
+    background-color: var(--hvid);
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .odense {
+    float: right;
+    position: relative;
+    padding: 8% 7% 0% 1%;
+    z-index: 2;
+  }
+
+  .odense img {
+    border-radius: 1%;
+    z-index: 2;
+  }
+
+  .odensebanner {
+    position: absolute;
+    padding-left: 55%;
+    padding-bottom: 10%;
+    z-index: 1;
+  }
+
+  .odensebanner img {
+    animation: rotate 12s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {transform: rotate(0deg)}
+
+    100% {transform: rotate(360deg) }
+  }
+
+  .adresse {
+    font-family: aileron, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 80%;
+    color: var(--sort);
+    padding-top: 37%;
+    text-align: right;
+  }
+  
+  .subtitel {
+    font-family: "swear-display", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 220%;
+    color: var(--sort);
+    padding-left: 7.6%;
+    padding-top: 7%;
+    margin-bottom: auto;
+    
+  }
+
+  h1 {
+    font-family: aileron, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 800%;
+    color: var(--sort);
+    padding-left: 7%;
+    margin-bottom: auto;
+    margin: 0;
+    
+  }
+
+  h2 {
+    font-family: aileron, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 800%;
+    color: var(--sort);
+    padding-left: 18.3%;
+    margin: 0;
+    padding-bottom: 4%;
+    
+  }
+
+  h3 {
+    font-family: aileron, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 180%;
+    color: var(--sort);
+    padding-left: 7%;
+    margin-bottom: 1.5%;
+  }
+
+  .brødtekst {
+    float: right;
+    width: 35%;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 160%;
+    line-height: 1.2;
+    color: var(--sort);
+    padding-right: 7%;
+  }
+
+  .kontaktinfo {
+    padding-top: 18%;
+  }
+
+  .logos {
+    padding: 2% 0% 0% 7%;
+  }
+
+/* =============== NAVIGATION BAR =============== */
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(252, 252, 250, 0); /* Lav opacitet */
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    padding: 10px 20px 0px 20px;
+  }
+  
+  .menu ul {
+    margin: 0;
+    padding-left: 580px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu li {
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    list-style: none;
+    letter-spacing: 1px;
+  }
+  
+  .menu li a {
+    display: block;
+    display: grid;
+    color: var(--sort);
+    text-align: center;
+    padding: 18px 40px;
+    text-decoration-line: underline;
+    font-size: 16px;
+  }
+  
+  .menu li a:hover {
+    font-family: "swear-display", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 21px;
+    color: var(--sort);
+    text-decoration-line: none;
+    transition: font-family 1.2s ease;
+  }
+  
+  .hover-text:hover {
+    font-size: 10px;
+  }
+  
+  .logo img {
+    height: 80px;
+    float: left;
+    padding-left: 15px;
+  }
+  
+
+
+/* =============== FOOTER =============== */
+
+.footer {
+    z-index: 3;
+    background-color: #1B1C1D;
+    margin-top: auto;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footerkontakt {
+    color: #FFF6EB;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footerkontakt h5, .footerkontakt p {
+    margin: 0 15px; /* Juster denne værdi efter behov */
+    padding: 0;
+}
+
+h5 {
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+p {
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 25px;
+}
+
+h5, p {
+    display: block;
+    text-align: left;
+}
+
+.footerkontakt ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footerbanner {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    color: #FAFAF9;
+    font-size: 100px;
+    font-family: "swear-display", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.footerbanner span {
+    display: inline-block;
+    animation: footerbanner 50s linear infinite;
+}
+
+@keyframes footerbanner {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+
+/* =============== FOOTER LINK DECORATION =============== */
+
+.socialtpunkter a {
+    color: #FAFAF9;
+    text-decoration: none; 
+}
+
+.socialtpunkter a:hover {
+    color: #ff2300;
+    text-decoration: underline;
+}
+
+
+.socialtpunkter a:active {
+    color: #2838D2;
+  }
+
+
+.menupunkter a {
+    color: #FAFAF9;
+    text-decoration: none; 
+}
+
+.menupunkter a:hover {
+    color: #ff2300;
+    text-decoration: underline;
+}
+
+
+.menupunkter a:active {
+    color: #2838D2;
+  }
+
+.lokation a {
+    color: var(--hvid);
+    text-decoration: none;
+}
+
+.lokation a:hover {
+    color: var(--rød);
+    text-decoration: underline;
+}
+
+.lokation:active {
+    color: var(--blå);
+}
