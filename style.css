@@ -1,0 +1,1089 @@
+
+/* =============== GENERAL =============== */
+
+:root { 
+    --black: #1B1C1D; 
+    --white: #FAFAF9;
+    --red: #ff2300;
+    --blue: #2838D2;
+    overscroll-behavior: none;
+    overflow-x: hidden;
+} 
+
+html {
+    font-size: 100%;
+    background-color: var(--white);
+}
+
+body {
+    padding-top: 9%;
+    margin: 0;
+}
+
+h1 {
+    font-family: aileron, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 800%;
+    color: var(--sort);
+    padding-left: 7%;
+    margin-bottom: auto;
+    margin: 0;
+    float: left;
+}
+
+h2 {
+    font-family: "swear-display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 800%;
+}
+
+h3 {
+    font-family: "swear-display", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 400%;
+  }
+  
+h4 {
+    font-family: "swear-display", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 250%;
+  }
+
+h5 {
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+h6 {
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 29px;
+    font-size: 110%;
+}
+
+p {
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 160%;
+  }
+
+
+/* =============== NAVIGATION BAR =============== */
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(252, 252, 250, 0); /* Lav opacitet */
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+    padding: 10px 20px 0px 20px;
+}
+
+.menu ul {
+    margin: 0;
+    padding-left: 580px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    list-style: none;
+    letter-spacing: 1px;
+}
+
+.menu li a {
+    display: block;
+    display: grid;
+    color: var(--black);
+    text-align: center;
+    padding: 18px 40px;
+    text-decoration-line: underline;
+    font-size: 16px;
+}
+
+.menu li a:hover {
+    font-family: "swear-display", serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 21px;
+    color: var(--black);
+    text-decoration-line: none;
+    transition: font-family 1.2s ease;
+}
+
+.hover-text:hover {
+    font-size: 10px;
+}
+
+.logo img {
+    height: 80px;
+    float: left;
+    padding-left: 15px;
+}
+
+
+/* =============== HOMEPAGE =============== */
+
+.titel { grid-area: main;}
+.tekstboks { grid-area: tekstboks;}
+.billedeboks { grid-area: billedeboks;}
+.footer { grid-area: footer;}
+
+.grid-container {
+        display: grid;
+        grid-template-areas: 
+        'main main main'
+        'tekstboks tekstboks tekstboks'
+        'billedeboks billedeboks billedeboks'
+        'footer footer footer';
+        grid-template-columns: 4fr 3fr 3fr;
+        grid-template-rows: 650px 400px 550px 400px;
+        height: 100vh;
+        grid-gap: 10px;  
+  }
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    margin: 0 5%;
+}
+
+.titel1 {
+    flex: 1;
+    z-index: 1;
+    margin: 0;
+    padding: 0px;
+  }
+
+.changing-text {
+    flex: 1;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.changing-text:after {
+    content: "IDEER";
+    animation: changeText 6s infinite;
+}
+
+@keyframes changeText {
+    0% { content: "IDEER"; }
+    20.1% { content: "DRØMME"; }
+    40.1% { content: "VISIONER"; }
+    60.1% { content: "DESIGNS"; }
+    81.1% { content: "MÅL"; }
+}
+
+
+.blob-outer-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    inset: 0;
+    margin: auto;
+}
+
+.blob-inner-container {
+    border-radius: 99999px;
+    position: absolute;
+    inset: 0;
+    top: 40px;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    min-width: 1000px;
+    overflow: hidden;
+    transform: scale(0.8) translateX(50%);
+    filter: blur(140px);
+}
+
+.blob {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    inset: 5px;
+    top: 40px;
+    right: 0;
+    background: conic-gradient(from 0deg, #2838D2, #ff2300, #2838D2, #ff2300, #2838D2);
+    animation: movingBlob 9s linear infinite;
+}
+
+@keyframes movingBlob {
+    0% {
+        transform: rotate(0deg) scale(2) translate(0, 0);
+    }
+    25% {
+        transform: rotate(90deg) scale(2.1) translate(10px, -10px);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.9) translate(-10px, 10px);
+    }
+    75% {
+        transform: rotate(270deg) scale(2.05) translate(10px, 10px);
+    }
+    100% {
+        transform: rotate(360deg) scale(2) translate(0, 0);
+    }
+}
+
+.billedeboks {
+    grid-area: billedeboks;
+    width: 100%;
+    display: block;
+    color: var(--white);
+    font-family: aileron, sans-serif;
+    font-size: 24px;
+    z-index: 1;
+    padding-top: 5%;
+    padding-bottom: 9%;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    animation: slide 11s infinite;
+}
+
+.carousel img {
+    width: calc((100% / 3) - 20px); /* 3 billeder ad gangen, minus mellemrum */
+    flex-shrink: 0;
+    margin: 0 10px; /* mellemrum mellem billederne */
+    border-radius: 5px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    16.67% {
+        transform: translateX(0);
+    }
+    33.34% {
+        transform: translateX(calc(-100% / 3));
+    }
+    50.01% {
+        transform: translateX(calc(-100% / 3));
+    }
+    66.68% {
+        transform: translateX(calc(-200% / 3));
+    }
+    83.35% {
+        transform: translateX(calc(-200% / 3));
+    }
+    100% {
+        transform: translateX(calc(-300% / 3));
+    }
+}
+
+.tekstboks {
+    grid-area: tekstboks;
+    background-color: var(--black);
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.intro {
+    float: right;
+    padding-right: 10%;
+    padding-top: 3%;
+    width: 35%;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 160%;
+    line-height: 1.5;
+    color: var(--white);
+}
+
+.velkommen {
+    float: left;
+    width: 22%;
+    padding: 3%;
+    animation: rotate 12s linear infinite;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg)}
+  
+    to {transform: rotate(360deg) }
+  }
+
+/* =============== ABOUT ME PAGE =============== */
+
+.kliktekst1 {
+    font-family: "swear-display", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 250%;
+    float: left;
+    padding-left: 38%;
+    margin: 0;
+  }
+  
+  .kliktekst2 {
+    font-family: "swear-display", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 250%;
+    padding-right: 48%;
+    padding-bottom: 5%;
+    float: right;
+    margin: 0;
+  }
+  
+  .arrow img {
+    width: 8%;
+    margin: 0;
+    float: left;
+    padding-top: 25%;
+  }
+  
+  .hobbytitel {
+    color: var(--black);
+    padding-right: 7%;
+    padding-top: 10%;
+    margin-bottom: auto;
+    margin: 0;
+    float: right;
+    text-align: right;
+  }
+
+  .mig {
+    float: left;
+    width: 35%;
+    line-height: 1.5;
+    color: var(--black);
+    padding-left: 7.5%;
+    padding-top: 5%;
+  }
+  
+  .portrætter img {
+    width: 35%;
+    rotate: 7deg;
+    float: right;
+    padding: 7% 7% 2% 7%;
+    display: none;
+  }
+  
+  .portrætter img.active {
+    width: 35%;
+    rotate: 7deg;
+    float: right;
+    padding: 7% 7% 2% 7%;
+    display: block;
+  }
+  
+  .trebeskrivelse {
+    float: left;
+    padding-top: 5%;
+    padding-left: 7%;
+    margin: 0;
+  }
+  
+  .trebeskrivelse h3 {
+    font-family: "swear-display", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 400%;
+    color: var(--black);
+    margin: 0;
+  }
+
+  table {
+    width: 100%;
+    margin-left:6.5%; 
+    margin-bottom: 5%;
+  }
+  
+td {
+    height: 150px;
+}
+
+  .kasse1-front {
+    background-color: var(--blue);
+    width: 300px;
+    height: 300px;
+    border: 5px solid var(--blue);
+    box-sizing: border-box; /*border holder sig indenfor kasse str*/
+    padding: 6.5%;
+    text-align: center;
+    color: var(--white);
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+  }
+  
+  .kasse1-back {
+    background-color: var(--white);
+    width: 300px;
+    height: 300px;
+    border: 5px solid var(--blue);
+    box-sizing: border-box; 
+    padding: 6.5%;
+    text-align: center;
+    color: var(--blue);
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+  }
+  
+  .kasse2-front {
+    background-color: var(--blue);
+    width: 300px;
+    height: 300px;
+    border: 5px solid var(--blue);
+    box-sizing: border-box;
+    padding: 6.5%;
+    text-align: center;
+    color: var(--white);
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+  }
+
+  .kasse2-back{
+    background-color: var(--white);
+    width: 300px;
+    height: 300px;
+    border: 5px solid var(--blue);
+    box-sizing: border-box; 
+    padding: 6.5%;
+    text-align: center;
+    color: var(--blue);
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+  }
+
+  .kasse3-front {
+    background-color: var(--blue);
+    width: 300px;
+    height: 300px;
+    border: 5px solid var(--blue);
+    box-sizing: border-box;
+    padding: 6.5%;
+    text-align: center;
+    color: var(--white);
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+  }
+
+  .kasse3-back{
+    background-color: var(--white);
+    width: 300px;
+    height: 300px;
+    border: 5px solid var(--blue);
+    box-sizing: border-box; 
+    padding: 6.5%;
+    text-align: center;
+    color: var(--blue);
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+  }
+
+  .flip-container {
+    perspective: 1000px;
+  }
+  .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .front,
+  .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+  .back {
+    transform: rotateY(180deg);
+  }
+
+    .hobbybeskrivelse {
+    float: right;
+    width: 36%;
+    line-height: 1.5;
+    color: var(--sort);
+    padding-right: 7.5%;
+    padding-top: 5%;
+    text-align: right;
+  }  
+
+/* =============== CONTACT PAGE =============== */
+.odense {
+    float: right;
+    position: relative;
+    padding: 1% 7% 0% 1%;
+    z-index: 2;
+  }
+
+  .odense img {
+    border-radius: 1%;
+    z-index: 2;
+  }
+
+  /* 
+  .odensebanner {
+    position: absolute;
+    padding-left: 55%;
+    padding-bottom: 10%;
+    z-index: 1;
+  }
+    */
+
+.odensebanner {
+    float: right;
+    z-index: 1;
+    padding: 0% 0% 5% 7%;
+}
+
+  .odensebanner img {
+    animation: rotate 12s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {transform: rotate(0deg)}
+
+    100% {transform: rotate(360deg) }
+  }
+
+  .nummer {
+    font-family: aileron, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 160%;
+    color: var(--black);
+    padding-top: 31%;
+    text-align: right;
+  }
+
+  .by {
+    font-family: aileron, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 160%;
+    color: var(--black);
+    padding-top: 0%;
+    text-align: right;
+  }
+  
+  .subtitel {
+    font-family: "swear-display", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 220%;
+    color: var(--black);
+    padding-left: 7.6%;
+    padding-top: 0;
+    margin-bottom: auto;
+    
+  }
+
+  h1 {
+    font-family: aileron, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 800%;
+    color: var(--black);
+    padding-left: 7%;
+    margin-bottom: auto;
+    margin: 0;
+    
+  }
+
+  .trintekst {
+    font-family: aileron, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 800%;
+    float: left;
+    color: var(--black);
+    padding-left: 25%;
+    margin: 0;
+    padding-bottom: 4%;
+  }
+
+  .brødtekst {
+    float: right;
+    width: 35%;
+    font-size: 160%;
+    line-height: 1.2;
+    color: var(--black);
+    padding-right: 6%;
+  }
+
+  .kontaktinfo {
+    padding-top: 40%;
+    padding-left: 5%;
+    width: 30%;
+  }
+
+  .kontaktbeskrivelse {
+    font-family: aileron, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 160%;
+    color: var(--black);
+    padding-left: 7%;
+    margin-bottom: 1.5%;
+  }
+
+  .logos {
+    padding: 12% 0% 0% 7%;
+  }
+
+/* =============== PROJECT PAGE =============== */
+
+.CTA {
+    color: var(--sort);
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .instagram {
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 190px;
+    /*grid-column: 2;*/
+    margin-top: 120px;
+    animation: rotate 9s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from {transform: rotate(0deg)}
+  
+    to {transform: rotate(360deg) }
+  }
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px;
+  }
+  
+  /*de 3 desktop kolonner*/
+  .column {
+    flex: 33%;
+    max-width: 33%;
+    padding: 0;
+  }
+  
+  .column img {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+    overflow: hidden;
+    transition: transform .2s;
+    filter: grayscale(100%); /* Sort/hvid filter */
+  }
+  
+  .column img:hover {
+    transform: scale(1.03);
+    filter: grayscale(0%); /* Fjern sort/hvid filter ved hover */
+  }
+  
+  .boxtall {
+    width: 350px;
+    height: 500px;
+    border-radius: 5px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .boxtall:after {
+    content: 'boxshadow';
+    background: linear-gradient(77deg, rgba(255,35,0,1) 0%, rgba(40,56,210,1) 54%, rgba(228,229,224,1) 100%);
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    z-index: -1;
+    filter: blur(40px);
+    width: calc(120%);
+    height: calc(120%);
+    animation: animate 20s linear infinite;
+    opacity: 0%;
+    transition: opacity .6s ease-out;
+  }
+  
+  .boxtall:hover:after {
+    opacity: 1;
+  }
+  
+  .boxshort {
+    width: 350px;
+    border-radius: 5px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .boxshort:after {
+    content: 'boxshadow';
+    background: linear-gradient(77deg, rgba(255,35,0,1) 0%, rgba(40,56,210,1) 54%, rgba(228,229,224,1) 100%);
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    z-index: -1;
+    filter: blur(40px);
+    width: calc(120%);
+    height: calc(120%);
+    animation: animate 20s linear infinite;
+    opacity: 0%;
+    transition: opacity .6s ease-out;
+  }
+  
+  .boxshort:hover:after {
+    opacity: 1;
+  }
+  
+  @media (max-width: 1200px) {
+    .column {
+      flex: 25%;
+      max-width: 25%;
+    }
+  }
+  
+  /* Responsivt layout - to kolonner*/
+  @media (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+      margin-bottom: 0px;
+      break-inside: avoid;
+    }
+    }
+  
+  /* Responsivt layout - 1 kolonne */
+  @media (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+      break-inside: avoid;
+    }
+  }
+
+/* =============== PHOTOGRAPHY PAGE =============== */
+
+/*
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'h1 container'
+      'h2 container';
+    padding: 10px;
+  }
+
+.container {
+    grid-area: container;
+    padding: 2rem;
+    width: 46rem;
+    height: 54rem;
+    margin-left: auto;
+}
+
+.container_slider {
+    position: relative;
+    max-width: 50rem;
+}
+
+.container_slider-image {
+    display: flex;
+    aspect-ratio: 11/9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0,75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.container_slider-image img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #FAFAF9;
+    opacity: 0.75;
+    transition: opacity ease 0.25s;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+
+.list {
+    display: flex;
+    gap: 8px;
+    padding: 16px;
+  
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .item {
+    flex-shrink: 0;
+    width: 100%;
+    height: 90vh;
+  
+    background-color: #FFF;
+  
+    scroll-snap-align: center;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  
+    font-family: sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+  }
+
+/* =============== BLUE BUTTON =============== */
+
+.bluebutton {
+    background-color: var(--blue);
+    color: var(--white);
+    border: 2px solid var(--blue);
+    border-radius: 25px;
+    padding: 10px 35px;
+    text-align: center;
+    font-size: 15px;
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: block;
+    margin: auto;
+    margin-bottom: 100px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+
+  .bluebutton a {
+    color: var(--white);
+    text-decoration: none;
+  }
+  
+  .bluebutton:hover {
+    background-color: var(--white);
+    border: 2px solid var(--blue);
+    color: var(--blue);
+  }
+
+  .bluebutton:hover a{
+    color: var(--blue);
+  }
+
+
+/* =============== RED BUTTON =============== */
+
+.redbutton {
+    background-color: var(--white);
+    color: var(--red);
+    border: 2px solid var(--red);
+    border-radius: 25px;
+    padding: 10px 35px;
+    text-align: center;
+    font-size: 15px;
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: block;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+  
+  .redbutton:hover {
+    background-color: var(--red);
+    border: 2px solid var(--white);
+    color: var(--white);
+  }
+  
+  
+
+/* =============== MEDIA QUERY =============== 
+
+  @media only screen and (min-width: 550px) {
+    display: grid;
+    grid-template-areas: 
+    'menu menu'
+    'main main'
+    'footer footer';
+    grid-gap: 10px;
+    padding: 10px; 
+    }
+}
+*/
+
+/* =============== FOOTER =============== */
+
+.footer {
+    z-index: 3;
+    background-color: var(--black);
+    margin-top: auto;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footerkontakt {
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footerkontakt h5, .footerkontakt h6 {
+    margin: 0 15px; /* Juster denne værdi efter behov */
+    padding: 0;
+}
+
+h5, h6 {
+    display: block;
+    text-align: left;
+}
+
+.footerkontakt ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footerbanner {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    color: var(--white);
+    font-size: 100px;
+    font-family: "swear-display", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.footerbanner span {
+    display: inline-block;
+    animation: footerbanner 50s linear infinite;
+}
+
+@keyframes footerbanner {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+
+/* =============== FOOTER LINK DECORATION =============== */
+
+.socialtpunkter a {
+    color: var(--white);
+    text-decoration: none; 
+}
+
+.socialtpunkter a:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+
+.socialtpunkter a:active {
+    color: var(--blue);
+  }
+
+
+.menupunkter a {
+    color: var(--white);
+    text-decoration: none; 
+}
+
+.menupunkter a:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+
+.menupunkter a:active {
+    color: var(--blue);
+  }
+
+.lokation a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.lokation a:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+.lokation:active {
+    color: var(--blue);
+}

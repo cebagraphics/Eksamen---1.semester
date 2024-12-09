@@ -4,15 +4,12 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Projekter</title>
-      <link rel="stylesheet" href="about.css">
+      <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="https://use.typekit.net/gdy6gko.css">
 
 
     </head>
-
-    <html>
             <body>
-
                   <nav class="menu">
                       <div class="hover-text">
                       <div class="logo"><a href="index.html"><img src="img/blåtlogo.png" alt="logo"></a></div>
@@ -34,30 +31,69 @@
 
                 <script src="script.js"></script>
 
-                <p class="mig">Hej med dig! Mit navn er Cecilie. Jeg er 21 år og studerer til multimediedesigner på UCL i Odense. Herunder kan du læse mere om, hvad jeg laver når jeg ikke ???? </p>
+                <p class="mig">Hej med dig! Mit navn er Cecilie. Jeg er 21 år og studerer til multimediedesigner på UCL i Odense. Herunder kan du læse mere om, hvad jeg laver når jeg ikke ????</p>
 
                 <div class="arrow">
                     <img src="img/arrowblue.png" alt="">
                 </div>
 
-                <h3>Klik for</h3>
+                <h3 class="kliktekst1">Klik for</h3>
 
-                <h4>et smil!</h4>
+                <h4 class="kliktekst2">et smil!</h4>
 
                 <div class="trebeskrivelse">
-                <h2>TRE HURTIGE</h2>
-                <p>Klik på kasserne herunder og find hurtigt tre facts om mig!</p>
+                <h3>TRE HURTIGE</h3>
+                <p>Klik på kasserne herunder og afslør tre facts om mig!</p>
                 </div>
             
-                <div class="trekasser">
-                <div class="kasse1">1</div>
-                <div class="kasse2">2</div>
-                <div class="kasse3">3</div>
-                </div>
+             
+                
+                <table class="flip-container" onclick="this.classList.toggle('hover');">
+                <tr>
+                    <td>
+                    <div class="flipper">
+                      <div class="front">
+                        <div class="kasse1-front">Front</div>
+                      </div>
+                      <div class="back">
+                        <div class="kasse1-back">Back</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
 
-                <h2>HVAD LAVER<br>JEG?</h2>
+                <td>
+                  <div class="flip-container" onclick="this.classList.toggle('hover');">
+                    <div class="flipper">
+                      <div class="front">
+                        <div class="kasse2-front">Front</div>
+                      </div>
+                      <div class="back">
+                        <div class="kasse2-back">Back</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
 
-                <p class="hobby">Jeg har altid været draget af at skabe noget med mine hænder. Derfor ligger de også sjældent stille og jeg finder altid noget kreativt at gå igang med. I videoen hér til venstre kan du se nogle af de forskellige ting jeg foretager mig.</p>
+                <td>
+                  <div class="flip-container" onclick="this.classList.toggle('hover');">
+                    <div class="flipper">
+                      <div class="front">
+                        <div class="kasse3-front">Front</div>
+                      </div>
+                      <div class="back">
+                        <div class="kasse3-back">Back</div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                </tr>
+                </table>
 
+                <h1 class="hobbytitel">HVAD LAVER<br>JEG?</h1>
+
+                <p class="hobbybeskrivelse">Jeg har altid været draget af at skabe noget med mine hænder. Derfor ligger de også sjældent stille og jeg finder altid noget kreativt at gå igang med. I videoen hér til venstre kan du se nogle af de forskellige ting jeg foretager mig.
+                </p>
+                    
             </body>
-            </html>
+</html>
