@@ -840,55 +840,82 @@ width: 6%;
 }
  
 .table-ikoner {
-    width: 80%;
+    width: 100%;
     padding-top: 5%;
-    padding-left: 20%;
 }
 
     .kompetencerkasse1-back, .kompetencerkasse2-back, .kompetencerkasse3-back, 
     .kompetencerkasse4-back, .kompetencerkasse5-back, .kompetencerkasse6-back, 
     .kompetencerkasse7-back, .kompetencerkasse8-back, .kompetencerkasse9-back {
-    background-color: var(--white);
+    background-color: var(--blue);
     width: 250px;
     height: 250px;
-    border: 5px solid var(--black);
     border-radius: 50%;
     box-sizing: border-box; 
-    padding: 15%;
-    padding-top: 9%;
+    padding: 18%;
+    padding-top: 19%;
     text-align: center;
-    color: var(--black);
+    color: var(--white);
     font-family: source-sans-pro, sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 120%;
-    line-height: 2; 
+    line-height: 1.5; 
+    content: 'boxshadow';
     }
 
     .kompetencerfront img {
     width: 250px;
     height: 250px;
+    filter: grayscale(100%);
 }
-    /*filter: grayscale(100%);/*
-    
 
-    /*
-    .stjerneikonhøjre {
-        width: 5%;
-        padding-top: 14%;
-        padding-right: 15%;
-        float: left;
-    }
+.kompetencerfront {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    border-radius: 50%;
+    transition: transform .2s;
+    background: linear-gradient(#2838D2, #ff2300) padding-box, linear-gradient(#ff2300, #2838D2) border-box;
+}
 
-    .stjerneikonvenstre {
-        width: 5%;
-        padding-top: 16%;
-        padding-right: 1%;
-        padding-left: 10%;
-        padding-bottom: 1%;
-        float: right;
+.kompetencerfront::after {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    right: -18px;
+    bottom: -18px;
+    border-radius: 50%;
+    background: linear-gradient(#2838D2, #ff2300);
+    filter: blur(15px);
+    z-index: -1;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
     }
-    */
+    50% {
+        transform: rotate(180deg); 
+
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+    .kompetencerfront img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+  }
     
     .kompetencerflip-container {
     perspective: 500px; 
