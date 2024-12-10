@@ -828,51 +828,138 @@ width: 6%;
   }
 
 
-/* =============== SKILLS PAGE =============== */
+/* =============== SKILLS PAGE =============== <div class="kliktekst">
+        <h3>Klik på<br>boldene!</h3>
+        <img class="bluearrow" src="img/arrowblue.png">
+        </div>*/
 
 .kompetencerbrødtekst {
-    float: right;
+    float: left;
     width: 36%;
     line-height: 1.5;
     color: var(--black);
-    padding-right: 7.5%;
-    padding-top: 15%;
-}
- 
-.table-ikoner {
-    width: 100%;
+    padding-right: 7%;
+    padding-left: 7%;
     padding-top: 5%;
 }
 
-    .kompetencerkasse1-back, .kompetencerkasse2-back, .kompetencerkasse3-back, 
-    .kompetencerkasse4-back, .kompetencerkasse5-back, .kompetencerkasse6-back, 
-    .kompetencerkasse7-back, .kompetencerkasse8-back, .kompetencerkasse9-back {
-    background-color: var(--blue);
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    box-sizing: border-box; 
-    padding: 18%;
-    padding-top: 19%;
-    text-align: center;
-    color: var(--white);
-    font-family: source-sans-pro, sans-serif;
-    font-weight: 300;
+.boldeiluften {
+    width: 47%;
+    padding-left: 1.5%;
+    float: right;
+    z-index: -5;
+    position: absolute;
+}
+
+.boldeiluften2 {
+    width: 47%;
+    padding-left: 1.5%;
+    float: left;
+    z-index: -5;
+    left: 0;
+    top: 200%;
+    rotate: 180deg;
+    position: absolute;
+}
+
+td {
+    font-family: "swear-display", serif;
+    font-weight: 500;
     font-style: normal;
-    font-size: 120%;
-    line-height: 1.5; 
-    content: 'boxshadow';
+    font-size: 300%;
+    text-align: center; 
+    vertical-align: middle;
+}
+
+.kliktekst {
+    float: right;
+    padding-top: 10%;
+}
+
+.bluearrow {
+    width: 30%;
+    rotate: 170deg;
+    float: left;
+}
+
+.table-ikoner {
+    width: 90%;
+    padding-left: 7%;
+    padding-top: 5%;
+}
+
+.clickicon {
+    float: left;
+    width: 10%;
+    z-index: 2;
+    padding-top: 72%;
+    position: absolute;
+}
+
+.kompetencerback {
+position: relative;
+background-color: var(--white);
+border: 1px solid;
+width: 220px;
+height: 220px;
+border-radius: 50%;
+box-sizing: border-box; 
+z-index: 1;
+padding: 18%;
+padding-top: 10%;
+text-align: center;
+color: var(--black);
+font-family: source-sans-pro, sans-serif;
+font-weight: 300;
+font-style: normal;
+font-size: 40%;
+line-height: 1.5; 
+content: '';
+}
+
+.kompetencerback::after {
+    content: "boxshadow";
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    right: -16px;
+    bottom: -16px;
+    border-radius: 50%;
+    background: linear-gradient(#2838D2, #ff2300);
+    filter: blur(25px);
+    z-index: -1;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
     }
+    50% {
+        transform: rotate(180deg); 
+
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 
     .kompetencerfront img {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     filter: grayscale(100%);
 }
 
 .kompetencerfront {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     position: relative;
     border-radius: 50%;
     transition: transform .2s;
@@ -882,13 +969,13 @@ width: 6%;
 .kompetencerfront::after {
     content: "";
     position: absolute;
-    top: -18px;
-    left: -18px;
-    right: -18px;
-    bottom: -18px;
+    top: -16px;
+    left: -16px;
+    right: -16px;
+    bottom: -16px;
     border-radius: 50%;
     background: linear-gradient(#2838D2, #ff2300);
-    filter: blur(15px);
+    filter: blur(25px);
     z-index: -1;
     animation: rotate 3s linear infinite;
 }
@@ -929,8 +1016,8 @@ width: 6%;
     transition: transform 0.6s;
     transform-style: preserve-3d;
     position: relative;
-    width: 250px;
-    height: 200px; 
+    width: 220px;
+    height: 220px; 
     }
     
     .kompetencerfront,
