@@ -89,14 +89,15 @@ p {
     padding: 10px 20px 0px 20px;
 }
 
-.menu ul {
+.menu table {
     margin: 0;
     padding-left: 580px;
+    padding-right: 0;
     display: flex;
     justify-content: center;
 }
 
-.menu li {
+.menu td {
     font-family: aileron, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -105,7 +106,7 @@ p {
     letter-spacing: 1px;
 }
 
-.menu li a {
+.menu td a {
     display: block;
     display: grid;
     color: var(--black);
@@ -115,7 +116,7 @@ p {
     font-size: 16px;
 }
 
-.menu li a:hover {
+.menu td a:hover {
     font-family: "swear-display", serif;
     font-weight: 600;
     font-style: normal;
@@ -133,12 +134,13 @@ p {
 .logo img {
     height: 80px;
     float: left;
-    padding-left: 15px;
+    padding-right: 20px;
 }
 
 
 /* =============== HOMEPAGE =============== */
 
+.menu { grid-area: menu;}
 .titel { grid-area: main;}
 .tekstboks { grid-area: tekstboks;}
 .billedeboks { grid-area: billedeboks;}
@@ -147,12 +149,13 @@ p {
 .grid-container {
         display: grid;
         grid-template-areas: 
+        'menu menu menu'
         'main main main'
         'tekstboks tekstboks tekstboks'
         'billedeboks billedeboks billedeboks'
         'footer footer footer';
         grid-template-columns: 4fr 3fr 3fr;
-        grid-template-rows: 650px 400px 550px 400px;
+        grid-template-rows: 100px 650px 400px 550px 400px;
         height: 100vh;
         grid-gap: 10px;  
   }
@@ -336,223 +339,237 @@ p {
 /* =============== ABOUT ME PAGE =============== */
 
 .kliktekst1 {
-    font-family: "swear-display", serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 250%;
-    float: left;
-    padding-left: 32%;
-    padding-top: 8%;
-    margin: 0;
-  }
+font-family: "swear-display", serif;
+font-weight: 500;
+font-style: normal;
+font-size: 250%;
+float: left;
+padding-left: 32%;
+padding-top: 8%;
+margin: 0; 
+}
   
-  .kliktekst2 {
-    font-family: "swear-display", serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 250%;
-    padding-right: 52%;
-    padding-bottom: 5%;
-    float: right;
-    margin: 0;
-  }
+.kliktekst2 {
+font-family: "swear-display", serif;
+font-weight: 500;
+font-style: normal;
+font-size: 250%;
+padding-right: 52%;
+padding-bottom: 5%;
+float: right;
+margin: 0; 
+}
   
-  .arrow img {
-    width: 8%;
-    margin: 0;
-    float: right;
-    padding-top: 25%;
-  }
-  
-  .hobbytitel {
-    color: var(--black);
-    padding-right: 7%;
-    padding-top: 7%;
-    margin-bottom: auto;
-    margin: 0;
-    float: right;
-    text-align: right;
-  }
+.arrow img {
+width: 8%;
+margin: 0;
+float: right;
+padding-top: 25%; 
+}
 
-  .mig {
-    float: left;
-    width: 35%;
-    line-height: 1.5;
-    color: var(--black);
-    padding-left: 7.5%;
-    padding-top: 5%;
-  }
+.mig {
+float: left;
+width: 35%;
+line-height: 1.5;
+color: var(--black);
+padding-left: 7.5%;
+padding-top: 5%; 
+}
   
-  .portrætter img {
-    width: 35%;
-    rotate: 7deg;
-    float: right;
-    padding: 7% 7% 2% 7%;
-    display: none;
-  }
+.portrætter img {
+width: 35%;
+rotate: 7deg;
+float: right;
+padding: 7% 7% 2% 7%;
+display: none; 
+}
   
-  .portrætter img.active {
-    width: 35%;
-    rotate: 7deg;
-    float: right;
-    padding: 7% 7% 2% 7%;
-    display: block;
-  }
+.portrætter img.active {
+width: 35%;
+rotate: 7deg;
+float: right;
+padding: 7% 7% 2% 7%;
+display: block; 
+}
 
-  .tapeportræt {
-    width: 400px;
-    position: absolute; 
-    top: 17%px; 
-    right: 9%; 
-    z-index: 1;
-    rotate: 26deg;
-  }
+.tapeportræt {
+width: 400px;
+position: absolute; 
+top: 17%px; 
+right: 9%; 
+z-index: 1;
+rotate: 26deg; 
+}
   
-  .trebeskrivelse {
-    float: left;
-    padding: 7% 0% 3% 7%;
-    margin: 0;
-  }
+.trebeskrivelse {
+float: left;
+padding: 7% 0% 3% 7%;
+margin: 0; 
+}
 
-  .trebeskrivelse p {
-    line-height: 0;
-  }
+.trebeskrivelse p {
+line-height: 0; 
+}
   
-    .trebeskrivelse h3 {
-    font-family: "swear-display", serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 400%;
-    color: var(--black);
-    margin: 0; }
+.trebeskrivelse h3 {
+font-family: "swear-display", serif;
+font-weight: 500;
+font-style: normal;
+font-size: 400%;
+color: var(--black);
+margin: 0; 
+}
 
-    table {
-    width: 100%;
-    margin-left:6.5%; 
-    margin-bottom: 5%; }
+table {
+width: 100%;
+margin-left:6.5%; 
+margin-bottom: 5%; 
+}       
   
-    td {
-    height: 150px;
-    width: 300px; }
+td {
+height: 150px;
+width: 300px; 
+}
 
   
-  .kasse1-back, .kasse2-back, .kasse3-back {
-    background-color: var(--white);
-    width: 300px;
-    height: 300px;
-    border: 5px solid var(--blue);
-    box-sizing: border-box; 
-    padding: 6.5%;
-    padding-top: 9%;
-    text-align: center;
-    color: var(--blue);
-    font-family: source-sans-pro, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 140%;
-    line-height: 2;
-  }
+.kasse1-back, .kasse2-back, .kasse3-back {
+background-color: var(--white);
+width: 300px;
+height: 300px;
+border: 5px solid var(--blue);
+box-sizing: border-box; 
+padding: 6.5%;
+padding-top: 9%;
+text-align: center;
+color: var(--blue);
+font-family: source-sans-pro, sans-serif;
+font-weight: 300;
+font-style: normal;
+font-size: 140%;
+line-height: 2; 
+}
 
-  .flip-container {
-    perspective: 1000px;
-  }
+.flip-container {
+perspective: 1000px; 
+}
 
-  .flip-container.hover .flipper {
-    transform: rotateY(180deg);
-  }
+.flip-container.hover .flipper {
+transform: rotateY(180deg); 
+}
 
-  .flipper {
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-    width: 300px;
-    height: 300px;
-  }
+.flipper {
+transition: transform 0.6s;
+transform-style: preserve-3d;
+position: relative;
+width: 300px;
+height: 300px; 
+}
+
+.front,
+.back {
+backface-visibility: hidden;
+position: absolute;
+top: 0;
+left: 0; 
+}
+
+.front {
+z-index: 2;
+transform: rotateY(0deg); 
+}
+
+.back {
+transform: rotateY(180deg); 
+}
+
+.hobbytitel {
+color: var(--black);
+padding-right: 7%;
+padding-top: 7%;
+margin-bottom: auto;
+margin: 0;
+float: right;
+text-align: right; 
+}
+
+.hobbybeskrivelse {
+float: right;
+width: 36%;
+line-height: 1.5;
+color: var(--black);
+padding-right: 7.5%;
+padding-top: 5%;
+text-align: right; 
+}  
+
+.video-container {
+float: left;
+padding-left: 7%;
+padding-bottom: 5%;
+position: relative;
+width: 100%;
+max-width: 400px; /* Juster efter behov */
+margin: auto;   
+}
+
+.video-container video {
+width: 100%;
+height: auto;
+display: block; 
+}
   
-  .front,
-  .back {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .front {
-    z-index: 2;
-    transform: rotateY(0deg);
-  }
-  .back {
-    transform: rotateY(180deg);
-  }
+.inspirationtitel {
+padding-top: 7%;
+}
 
-    .hobbybeskrivelse {
-    float: right;
-    width: 36%;
-    line-height: 1.5;
-    color: var(--sort);
-    padding-right: 7.5%;
-    padding-top: 5%;
-    text-align: right;
-  }  
+.inspirationbeskrivelse {
+float: left;
+width: 36%;
+line-height: 1.5;
+color: var(--black);
+padding-left: 7.5%;
+padding-top: 5%;
+}
 
-  .video-container {
-    float: left;
-    padding-left: 7%;
-    padding-bottom: 5%;
-    position: relative;
-    width: 100%;
-    max-width: 400px; /* Juster efter behov */
-    margin: auto;
-  }
+.rejsebilleder {
+float: right;
+}
+
+.list {
+display: flex;
+gap: 100px;
+padding: 80px;
+list-style: none;
+overflow-x: scroll;
+scroll-snap-type: x mandatory;
+width: 500px;
+}
+
+.item {
+flex-shrink: 0;
+width: 100%;
+height: 100vh;
+background-color: var(--white);
+max-width: 1200px;
+scroll-snap-align: center;
+box-sizing: border-box;
+}
   
-  .video-container video {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .inspirationtitel {
-    padding-top: 7%;
-  }
-
-  .inspirationbeskrivelse {
-    float: left;
-    width: 36%;
-    line-height: 1.5;
-    color: var(--sort);
-    padding-left: 7.5%;
-    padding-top: 5%;
-  }
-
-  .rejsebilleder {
-    float: right;
-  }
-
-  .list {
-    display: flex;
-    gap: 100px;
-    padding: 80px;
-    list-style: none;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    width: 500px;
-  }
+.content {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+}
   
-  .item {
-    flex-shrink: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--white);
-    max-width: 1200px;
-    scroll-snap-align: center;
-    box-sizing: border-box;
-  }
-  
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
+.swipe {
+float: right;
+padding-left: 7%;
+padding-bottom: 5%;
+position: relative;
+width: 6%;
+}
+
 
 /* =============== CONTACT PAGE =============== */
 .odense {
@@ -809,6 +826,103 @@ p {
       break-inside: avoid;
     }
   }
+
+
+/* =============== SKILLS PAGE =============== */
+
+.kompetencerbrødtekst {
+    float: right;
+    width: 36%;
+    line-height: 1.5;
+    color: var(--black);
+    padding-right: 7.5%;
+    padding-top: 15%;
+}
+ 
+.table-ikoner {
+    width: 80%;
+    padding-top: 5%;
+    padding-left: 20%;
+}
+
+    .kompetencerkasse1-back, .kompetencerkasse2-back, .kompetencerkasse3-back, 
+    .kompetencerkasse4-back, .kompetencerkasse5-back, .kompetencerkasse6-back, 
+    .kompetencerkasse7-back, .kompetencerkasse8-back, .kompetencerkasse9-back {
+    background-color: var(--white);
+    width: 250px;
+    height: 250px;
+    border: 5px solid var(--black);
+    border-radius: 50%;
+    box-sizing: border-box; 
+    padding: 15%;
+    padding-top: 9%;
+    text-align: center;
+    color: var(--black);
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 120%;
+    line-height: 2; 
+    }
+
+    .kompetencerfront img {
+    width: 250px;
+    height: 250px;
+}
+    /*filter: grayscale(100%);/*
+    
+
+    /*
+    .stjerneikonhøjre {
+        width: 5%;
+        padding-top: 14%;
+        padding-right: 15%;
+        float: left;
+    }
+
+    .stjerneikonvenstre {
+        width: 5%;
+        padding-top: 16%;
+        padding-right: 1%;
+        padding-left: 10%;
+        padding-bottom: 1%;
+        float: right;
+    }
+    */
+    
+    .kompetencerflip-container {
+    perspective: 500px; 
+    }
+
+    .kompetencerflip-container.hover .kompetencerflipper {
+    transform: rotateY(180deg); 
+    }
+    
+    .kompetencerflipper {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 250px;
+    height: 200px; 
+    }
+    
+    .kompetencerfront,
+    .kompetencerback {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    }
+    
+    .kompetencerfront {
+    z-index: 2;
+    transform: rotateY(0deg); 
+    }
+    
+    .kompetencerback {
+    transform: rotateY(180deg); 
+    }
+
 
 /* =============== PHOTOGRAPHY PAGE =============== */
 
