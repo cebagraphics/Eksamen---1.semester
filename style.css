@@ -341,7 +341,8 @@ p {
     font-style: normal;
     font-size: 250%;
     float: left;
-    padding-left: 38%;
+    padding-left: 32%;
+    padding-top: 8%;
     margin: 0;
   }
   
@@ -350,7 +351,7 @@ p {
     font-weight: 500;
     font-style: normal;
     font-size: 250%;
-    padding-right: 48%;
+    padding-right: 52%;
     padding-bottom: 5%;
     float: right;
     margin: 0;
@@ -359,14 +360,14 @@ p {
   .arrow img {
     width: 8%;
     margin: 0;
-    float: left;
+    float: right;
     padding-top: 25%;
   }
   
   .hobbytitel {
     color: var(--black);
     padding-right: 7%;
-    padding-top: 10%;
+    padding-top: 7%;
     margin-bottom: auto;
     margin: 0;
     float: right;
@@ -397,134 +398,75 @@ p {
     padding: 7% 7% 2% 7%;
     display: block;
   }
+
+  .tapeportræt {
+    width: 400px;
+    position: absolute; 
+    top: 17%px; 
+    right: 9%; 
+    z-index: 1;
+    rotate: 26deg;
+  }
   
   .trebeskrivelse {
     float: left;
-    padding-top: 5%;
-    padding-left: 7%;
+    padding: 7% 0% 3% 7%;
     margin: 0;
   }
+
+  .trebeskrivelse p {
+    line-height: 0;
+  }
   
-  .trebeskrivelse h3 {
+    .trebeskrivelse h3 {
     font-family: "swear-display", serif;
     font-weight: 500;
     font-style: normal;
     font-size: 400%;
     color: var(--black);
-    margin: 0;
-  }
+    margin: 0; }
 
-  table {
+    table {
     width: 100%;
     margin-left:6.5%; 
-    margin-bottom: 5%;
-  }
+    margin-bottom: 5%; }
   
-td {
+    td {
     height: 150px;
-}
+    width: 300px; }
 
-  .kasse1-front {
-    background-color: var(--blue);
-    width: 300px;
-    height: 300px;
-    border: 5px solid var(--blue);
-    box-sizing: border-box; /*border holder sig indenfor kasse str*/
-    padding: 6.5%;
-    text-align: center;
-    color: var(--white);
-    font-family: aileron, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 80px;
-  }
   
-  .kasse1-back {
+  .kasse1-back, .kasse2-back, .kasse3-back {
     background-color: var(--white);
     width: 300px;
     height: 300px;
     border: 5px solid var(--blue);
     box-sizing: border-box; 
     padding: 6.5%;
+    padding-top: 9%;
     text-align: center;
     color: var(--blue);
-    font-family: aileron, sans-serif;
-    font-weight: 400;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
     font-style: normal;
-    font-size: 80px;
-  }
-  
-  .kasse2-front {
-    background-color: var(--blue);
-    width: 300px;
-    height: 300px;
-    border: 5px solid var(--blue);
-    box-sizing: border-box;
-    padding: 6.5%;
-    text-align: center;
-    color: var(--white);
-    font-family: aileron, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 80px;
-  }
-
-  .kasse2-back{
-    background-color: var(--white);
-    width: 300px;
-    height: 300px;
-    border: 5px solid var(--blue);
-    box-sizing: border-box; 
-    padding: 6.5%;
-    text-align: center;
-    color: var(--blue);
-    font-family: aileron, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 80px;
-  }
-
-  .kasse3-front {
-    background-color: var(--blue);
-    width: 300px;
-    height: 300px;
-    border: 5px solid var(--blue);
-    box-sizing: border-box;
-    padding: 6.5%;
-    text-align: center;
-    color: var(--white);
-    font-family: aileron, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 80px;
-  }
-
-  .kasse3-back{
-    background-color: var(--white);
-    width: 300px;
-    height: 300px;
-    border: 5px solid var(--blue);
-    box-sizing: border-box; 
-    padding: 6.5%;
-    text-align: center;
-    color: var(--blue);
-    font-family: aileron, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 80px;
+    font-size: 140%;
+    line-height: 2;
   }
 
   .flip-container {
     perspective: 1000px;
   }
+
   .flip-container.hover .flipper {
     transform: rotateY(180deg);
   }
 
   .flipper {
-    transition: 0.6s;
+    transition: transform 0.6s;
     transform-style: preserve-3d;
     position: relative;
+    width: 300px;
+    height: 300px;
   }
   
   .front,
@@ -551,6 +493,66 @@ td {
     padding-top: 5%;
     text-align: right;
   }  
+
+  .video-container {
+    float: left;
+    padding-left: 7%;
+    padding-bottom: 5%;
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Juster efter behov */
+    margin: auto;
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .inspirationtitel {
+    padding-top: 7%;
+  }
+
+  .inspirationbeskrivelse {
+    float: left;
+    width: 36%;
+    line-height: 1.5;
+    color: var(--sort);
+    padding-left: 7.5%;
+    padding-top: 5%;
+  }
+
+  .rejsebilleder {
+    float: right;
+  }
+
+  .list {
+    display: flex;
+    gap: 100px;
+    padding: 80px;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    width: 500px;
+  }
+  
+  .item {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    max-width: 1200px;
+    scroll-snap-align: center;
+    box-sizing: border-box;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
 
 /* =============== CONTACT PAGE =============== */
 .odense {

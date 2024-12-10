@@ -24,14 +24,15 @@
 
                 <h1>HVEM ER<br>JEG?</h1>
 
+                <img class="tapeportræt" src="img/tape.png" alt="">
                 <div class="portrætter">
-                <img src="img/portræt1.png" alt="Billede 1" class="active" id="image1">
-                <img src="img/portræt2.png" alt="Billede 2" id="image2">
+                <img src="img/portræt (1).jpg" alt="Billede 1" class="active" id="image1">
+                <img src="img/portræt2.jpg" alt="Billede 2" id="image2">
                 </div>
 
                 <script src="script.js"></script>
 
-                <p class="mig">Hej med dig! Mit navn er Cecilie. Jeg er 21 år og studerer til multimediedesigner på UCL i Odense. Herunder kan du læse mere om, hvad jeg laver når jeg ikke ????</p>
+                <p class="mig">Hej med dig! Mit navn er Cecilie. Jeg er 21 år og studerer til multimediedesigner på UCL i Odense. Herunder kan du læse mere om, hvem jeg egentlig er og hvad jeg laver når jeg ikke er i fuld gang med studiet.</p>
 
                 <div class="arrow">
                     <img src="img/arrowblue.png" alt="">
@@ -42,21 +43,25 @@
                 <h4 class="kliktekst2">et smil!</h4>
 
                 <div class="trebeskrivelse">
-                <h3>TRE HURTIGE</h3>
-                <p>Klik på kasserne herunder og afslør tre facts om mig!</p>
+                <h3>Tre hurtige</h3>
+                <p>Klik på kasserne herunder og afslør tre sjove facts om mig!</p>
                 </div>
             
              
                 
-                <table class="flip-container" onclick="this.classList.toggle('hover');">
+                <table>
                 <tr>
-                    <td>
+
+                <td>
+                <div class="flip-container" onclick="this.classList.toggle('hover');">
                     <div class="flipper">
                       <div class="front">
-                        <div class="kasse1-front">Front</div>
+                        <div class="kasse1-front">
+                            <img src="img/norge.jpg">
+                        </div>
                       </div>
                       <div class="back">
-                        <div class="kasse1-back">Back</div>
+                        <div class="kasse1-back">Jeg er halv <b>nordmand</b> og tager ofte turen nordpå for at besøge min familie deroppe (derfor kan jeg også godt snakke norsk).</div>
                       </div>
                     </div>
                   </div>
@@ -66,10 +71,12 @@
                   <div class="flip-container" onclick="this.classList.toggle('hover');">
                     <div class="flipper">
                       <div class="front">
-                        <div class="kasse2-front">Front</div>
+                        <div class="kasse2-front">
+                            <img src="img/camino.jpg">
+                        </div>
                       </div>
                       <div class="back">
-                        <div class="kasse2-back">Back</div>
+                        <div class="kasse2-back">Jeg har været frivillig på et hostel på pilgrimsruten <b>"Caminoen"</b> i Spanien (og har også gået en del af den sammen med min kæreste).</div>
                       </div>
                     </div>
                   </div>
@@ -79,10 +86,14 @@
                   <div class="flip-container" onclick="this.classList.toggle('hover');">
                     <div class="flipper">
                       <div class="front">
-                        <div class="kasse3-front">Front</div>
+                        <div class="kasse3-front">
+                            <img src="img/bryllupskage.jpg">
+                        </div>
                       </div>
                       <div class="back">
-                        <div class="kasse3-back">Back</div>
+                        <div class="kasse3-back">
+                            Jeg elsker at bage og for nogle år tilbage bagte jeg også en 4-etagers <b>bryllupskage</b> til min onkel og tantes bryllup.
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -92,8 +103,34 @@
 
                 <h1 class="hobbytitel">HVAD LAVER<br>JEG?</h1>
 
-                <p class="hobbybeskrivelse">Jeg har altid været draget af at skabe noget med mine hænder. Derfor ligger de også sjældent stille og jeg finder altid noget kreativt at gå igang med. I videoen hér til venstre kan du se nogle af de forskellige ting jeg foretager mig.
+                <p class="hobbybeskrivelse">
+                    Jeg har altid været draget af at skabe noget med mine hænder. Derfor ligger de også sjældent stille og jeg finder altid noget kreativt at gå igang med. I videoen hér til venstre kan du se nogle af de forskellige kreative ting jeg foretager mig.
                 </p>
-                    
+
+                <div class="video-container">
+                <video controls loop autoplay muted>
+                    <source src="img/hobbiesvideo-ezgif.com-resize-video (2).mp4" type="video/mp4">
+                </video>
+                </div>
+
+                <h1 class="inspirationtitel">HVOR FÅR JEG<br>INSPIRATION?</h1>
+                <p class="inspirationbeskrivelse">
+                    Jeg ELSKER at rejse og det er også her jeg får meget af min inspiration. Ligemeget om det bare har været en forlænget weekend eller en længere rejse, så er min kamerulle altid fyldt helt op bagefter. Jeg har samlet nogle af mine ynglingsbilleder jeg har taget fra rundt i verden her til højre. Swipe og kom med mig på tur!
+                </p>
+
+                <div class="rejsebilleder">
+                <ul class="list">
+                    <li class="item"><div class="content"><img src="img/rejsegalleri/luftballon.jpg" alt=""></div></li>
+                    <li class="item"><div class="content"><img src="img/rejsegalleri/budapest.jpeg" alt=""></div></li>
+                    <li class="item"><div class="content"><img src="img/rejsegalleri/hamborg.jpeg" alt=""></div></li>
+                    <li class="item"><div class="content"><img src="img/rejsegalleri/kreta.jpg"></div></li>
+                    <li class="item"><div class="content"><img src="img/rejsegalleri/malta.jpg" alt=""></div></li>
+                    <li class="item"><div class="content"><img src="img/rejsegalleri/newyork.jpg" alt=""></div></li>
+                    <li class="item"><div class="content"><img src="img/rejsegalleri/norge.jpg"></div></li>
+                  </ul>
+                </div>
+        
+            </body>
+
             </body>
 </html>
