@@ -3,8 +3,8 @@
 <head>         
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cebagraphics</title>
-    <link rel="icon" href="img/blåtlogo.png" type="image/png">
+    <title>Kompetencer | Cebagraphics</title>
+    <link rel="icon" href="img/blaatlogo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/gdy6gko.css">
 </head>
@@ -12,7 +12,7 @@
 <body>
         <nav class="menu">
                 <div class="hover-text">
-                <div class="logo"><a href="index.html"><img src="img/blåtlogo.png" alt="logo"></a></div>
+                <div class="logo"><a href="index.html"><img src="img/blaatlogo.png" alt="logo"></a></div>
                 <ul>
                     <li><a href="projects.html" data-hover="Projekter">Projekter</a></li>
                     <li><a href="skills.html" data-hover="Skills">Kompetencer</a></li>
@@ -22,41 +22,35 @@
                 </div>
             </nav>
 
-        <h1>HVAD KAN<br>JEG?</h1>
-        <img class="boldeiluften" src="img/boldeiluftentekst.png">
+        <h1 class="skills__title">HVAD KAN<br>JEG?</h1>
+        <img class="skills__image" src="img/boldeiluftentekst.png" alt="Curvy Text 1">
 
-        <p class="kompetencerbrødtekst">Jeg elsker at lære nye ting og forbedre mig. Herunder kan du klikke på "boldene" og se hvilke kompetencer jeg har i værktøjskassen på det givne tidspunkt, som måske kan bidrage til jeres virksomhed.</p>
+        <p class="skills__intro--text">Jeg elsker at lære nye ting og forbedre mig. Herunder kan du klikke på "boldene" og se hvilke kompetencer jeg har i værktøjskassen på det givne tidspunkt, som måske kan bidrage til jeres virksomhed.</p>
 
-        <img class="clickicon" src="img/clickicon.svg">
+        <img class="skills__click--icon" src="img/clickicon.svg" alt="Click Icon">
 
-        <table class="table-ikoner">
-                <tr>
-                <td class="lilletekst">
-        <div class="illustrator">
-                <div class="kompetencerflip-container" onclick="this.classList.toggle('hover');">
-                    <div class="kompetencerflipper">
-                      <div class="kompetencerfront">
-                        <div class="kompetencerkasse1-front">
-                            <img src="img/ikoner/illustrator.png">
-                        </div>
+        <table class="skills__table">
+                <tr class="skills__table--row">
+                <td class="skills__table--cell">
+                <div class="competence-card__flipper" onclick="this.classList.toggle('hover');">
+                    <div class="competence-card__box">
+                      <div class="competence-card__front">
+                        <div><img src="img/ikoner/illustrator.png" alt="Illustrator"></div>
                       </div>
-                      <div class="kompetencerback">
+                        <div class="competence-card__back">
                                 I Adobe Illustrator er jeg i stand til at skabe en bred vifte af grafiske illustrationer og løsninger. 
-                      </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
                 </td>
                 <td></td>
-                <td class="lilletekst">
-                                  <div class="kompetencerflip-container" onclick="this.classList.toggle('hover');">
-                                    <div class="kompetencerflipper">
-                                      <div class="kompetencerfront">
-                                        <div class="kompetencerkasse2-front">
-                                            <img src="img/ikoner/indesign.png">
-                                        </div>
+                <td class="skills__table--cell">
+                                  <div class="competence-card__flipper" onclick="this.classList.toggle('hover');">
+                                    <div class="competence-card__box">
+                                      <div class="competence-card__front">
+                                        <div><img src="img/ikoner/indesign.png" alt="Indesign"></div>
                                       </div>
-                                      <div class="kompetencerback">
+                                      <div class="competence-card__back">
                                         I Adobe InDesign kan jeg skabe designs og layouts til både trykte og digitale udgivelser.
                                       </div>
                                     </div>
@@ -67,125 +61,162 @@
        
                 <tr>
                 <td></td>
-                <td class="lilletekst">
-                                      <div class="kompetencerflip-container" onclick="this.classList.toggle('hover');">
-                                        <div class="kompetencerflipper">
-                                          <div class="kompetencerfront">
-                                            <div class="kompetencerkasse7-front">
-                                                <img src="img/ikoner/visual-studio.png">
-                                            </div>
+                <td class="skills__table--cell">
+                                      <div class="competence-card__flipper" onclick="this.classList.toggle('hover');">
+                                        <div class="competence-card__box">
+                                          <div class="competence-card__front">
+                                            <div> <img src="img/ikoner/visual-studio.png" alt="Visual Studio"></div>
                                           </div>
-                                          <div class="kompetencerback">
+                                          <div class="competence-card__back">
                                                 I VS Code kan jeg kode simpel html og css. 
                                           </div>
                                         </div>
+                                </div>
                                 </td>
                  <td></td>
                 </tr>
 
         
                 <tr>
-                <td class="lilletekst">
-                  <div class="kompetencerflip-container" onclick="this.classList.toggle('hover');">
-                    <div class="kompetencerflipper">
-                      <div class="kompetencerfront">
-                        <div class="kompetencerkasse3-front">
-                            <img src="img/ikoner/after-effects.png">
-                        </div>
+                <td class="skills_table--cell">
+                  <div class="competence-card__flipper" onclick="this.classList.toggle('hover');">
+                    <div class="competence-card__box">
+                      <div class="competence-card__front">
+                        <div><img src="img/ikoner/after-effects.png" alt="After Effects"></div>
                       </div>
-                      <div class="kompetencerback">
+                      <div class="competence-card__back">
                             I Adobe After Effects kan jeg skabe bevægelsesdesign (animationer) og visuelle effekter. 
                         </div>
                   </div>
+                </div>
                 </td>
                 <td></td>
-                <td class="lilletekst">
-                                  <div class="kompetencerflip-container" onclick="this.classList.toggle('hover');">
-                                        <div class="kompetencerflipper">
-                                          <div class="kompetencerfront">
-                                            <div class="kompetencerkasse4-front">
-                                                <img src="img/ikoner/photoshop.png">
-                                            </div>
+                <td class="skills__table--cell">
+                                  <div class="competence-card__flipper" onclick="this.classList.toggle('hover');">
+                                        <div class="competence-card__box">
+                                          <div class="competence-card__front">
+                                            <div><img src="img/ikoner/photoshop.png" alt="Photoshop"></div>
                                           </div>
-                                          <div class="kompetencerback">
+                                          <div class="competence-card__back">
                                                 I Adobe Photoshop kan jeg redigere billeder, skabe grafikker/illustrationer og lave mockups. 
                                           </div>
                                       </div>
+                                </div>
                                          </td>
                 </tr>
 
        
                 <tr>
                 <td></td>
-                <td class="lilletekst">
-                        <div class="kompetencerflip-container" onclick="this.classList.toggle('hover');">
-                          <div class="kompetencerflipper">
-                            <div class="kompetencerfront">
-                              <div class="kompetencerkasse8-front">
-                                  <img src="img/ikoner/figma.png">
-                              </div>
+                <td class="skills__table--cell">
+                        <div class="competence-card__flipper" onclick="this.classList.toggle('hover');">
+                          <div class="competence-card__box">
+                            <div class="competence-card__front">
+                              <div><img src="img/ikoner/figma.png" alt="Figma"></div>
                             </div>
-                            <div class="kompetencerback">
+                            <div class="competence-card__back">
                                   I Figma kan jeg skabe wireframes og prototyper til apps, hjemmesider m.m.
                             </div>
                           </div>
+                        </div>
                   </td>
                   <td></td>
                 </tr>
 
      
                 <tr>
-                <td class="lilletekst">
-                  <div class="kompetencerflip-container" onclick="this.classList.toggle('hover');">
-                        <div class="kompetencerflipper">
-                          <div class="kompetencerfront">
-                            <div class="kompetencerkasse5-front">
-                                <img src="img/ikoner/lightroom.png">
-                            </div>
+                <td class="skills__table--cell">
+                  <div class="competence-card__flipper" onclick="this.classList.toggle('hover');">
+                        <div class="competence-card__box">
+                          <div class="competence-card__front">
+                            <div><img src="img/ikoner/lightroom.png" alt="Lightroom"></div>
                           </div>
-                          <div class="kompetencerback">
+                          <div class="competence-card__back">
                                 I Adobe Lightroom kan jeg redigere billeder så de bliver præcis som man vil have dem. 
                           </div>
                         </div>
+                </div>
                 </td>
                 <td></td>
-                <td class="lilletekst">
-                                      <div class="kompetencerflip-container" onclick="this.classList.toggle('hover');">
-                                        <div class="kompetencerflipper">
-                                          <div class="kompetencerfront">
-                                            <div class="kompetencerkasse6-front">
-                                                <img src="img/ikoner/premier.png">
-                                            </div>
+                <td class="skills__table--cell">
+                                      <div class="competence-card__flipper" onclick="this.classList.toggle('hover');">
+                                        <div class="competence-card__box">
+                                          <div class="competence-card__front">
+                                            <div><img src="img/ikoner/premier.png" alt="Premiere Pro"></div>
                                           </div>
-                                          <div class="kompetencerback">
+                                          <div class="competence-card__back">
                                                 I Adobe Premiere Pro kan jeg redigere enhver type video, så det passer til det givne projekt. 
                                           </div>
                                         </div>
+                                </div>
                                 </td>
                 </tr>
 
         
                 <tr>
                 <td></td>
-                <td class="lilletekst">
-                                  <div class="kompetencerflip-container" onclick="this.classList.toggle('hover');">
-                                        <div class="kompetencerflipper">
-                                          <div class="kompetencerfront">
-                                            <div class="kompetencerkasse9-front">
-                                                <img src="img/ikoner/kritalogo.png">
-                                            </div>
+                <td class="skills__table--cell">
+                                  <div class="competence-card__flipper" onclick="this.classList.toggle('hover');">
+                                        <div class="competence-card__box">
+                                          <div class="competence-card__front">
+                                            <div><img src="img/ikoner/kritalogo.png" alt="Krita"></div>
                                           </div>
-                                          <div class="kompetencerback">
+                                          <div class="competence-card__back">
                                                 I Krita kan jeg tegne illustrationer i samarbejde med min Wacom drawing pad. 
                                           </div>
                                         </div>
+                                </div>
                                 </td>
                         
                 <td></td>
                 </tr>
                 </table>
 
-                <img class="boldeiluften2" src="img/boldeiluftentekst.png">
-</body>
+                <img class="skills__image2" src="img/boldeiluftentekst.png" alt="Curvy Text 2">
+
+
+                <footer class="footer">
+                  <div class="footer__contact">
+                      <div class="footer__menu">
+                          <h5 class="footer__title">MENU</h5>
+                          <ul class="footer__menu-list">
+                              <li class="footer__menu-item"><a href="projects.html" class="footer__menu-link">Projekter</a></li>
+                              <li class="footer__menu-item"><a href="skills.html" class="footer__menu-link">Kompetencer</a></li>
+                              <li class="footer__menu-item"><a href="about.html" class="footer__menu-link">Om mig</a></li>
+                              <li class="footer__menu-item"><a href="contact.html" class="footer__menu-link">Kontakt</a></li>
+                          </ul>
+                      </div>
+              
+                      <div class="footer__social">
+                          <h5 class="footer__title">SOCIALT</h5>
+                          <ul class="footer__social-list">
+                              <li class="footer__social-item"><a href="https://www.instagram.com/cebagraphics/" target="_blank" class="footer__social-link">Instagram</a></li>
+                              <li class="footer__social-item"><a href="https://github.com/cebagraphics" target="_blank" class="footer__social-link">Github</a></li>
+                              <li class="footer__social-item"><a href="tel:+4560625531" class="footer__social-link">Telefon</a></li>
+                              <li class="footer__social-item"><a href="mailto:ceciliebang03@gmail.com" target="_blank" class="footer__social-link">Mail</a></li>
+                          </ul>
+                      </div>
+              
+                      <div class="footer__location">
+                          <h5 class="footer__title">LOKATION</h5>
+                          <ul class="footer__location-list">
+                              <li class="footer__location-item">
+                                  <a href="https://maps.app.goo.gl/ran3Emsc5RQp35oEA" target="_blank" class="footer__location-link">
+                                      Promenadebyen <br>
+                                      30, 1, 5 <br>
+                                      Odense C, <br>
+                                      5000
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              
+                  <div class="footer__banner">
+                      <span class="footer__banner-text">CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS</span>
+                  </div>
+              </footer>
+              
+              </body>
 
 </html>
