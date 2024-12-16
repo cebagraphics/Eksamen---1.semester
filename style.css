@@ -1426,6 +1426,40 @@ td {
 
 /* Responsiv - mobil */
 
+@media screen and (max-width: 480px) {
+    .project__image {
+        padding-top: 30%;
+    }
+
+    .project h1 {
+        padding-top: 30%;
+        padding-left: 7%;
+    }
+}
+
+
+/* =============== RED BUTTON =============== */
+
+.project__button--red {
+    background-color: var(--white);
+    color: var(--red);
+    border: 2px solid var(--red);
+    border-radius: 25px;
+    padding: 10px 35px;
+    text-align: center;
+    font-size: 15px;
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: block;
+    transition-duration: 0.4s;
+  }
+  
+  .project__button--red:hover {
+    background-color: var(--red);
+    border: 2px solid var(--white);
+    color: var(--white);
+  }
 
 /* =============== BLUE BUTTON =============== */
 
@@ -1472,29 +1506,6 @@ td {
         font-size: 14px;
     }
 }
-
-/* =============== RED BUTTON =============== */
-
-.project__button--red {
-    background-color: var(--white);
-    color: var(--red);
-    border: 2px solid var(--red);
-    border-radius: 25px;
-    padding: 10px 35px;
-    text-align: center;
-    font-size: 15px;
-    font-family: aileron, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    display: block;
-    transition-duration: 0.4s;
-  }
-  
-  .project__button--red:hover {
-    background-color: var(--red);
-    border: 2px solid var(--white);
-    color: var(--white);
-  }
 
 
 /* =============== MEDIA QUERY =============== 
