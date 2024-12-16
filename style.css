@@ -75,17 +75,26 @@ p {
     font-size: 160%;
   }
 
-@media screen and (max-width: 480px) {
+
+  @media (max-width: 480px) {
+
     h1 {
-        font-size: 500%;
+        padding-left: 16%;
+        font-size: 300%;
+    }
+    h3 {
+        font-size: 150%;
     }
 
-    h2 {
-        font-size: 500%;
+    p {
+        font-size: 90%;
+    }
+
+    h4 {
+        font-size: 120%;
     }
 
 }
-
 
 /* =============== NAVIGATION BAR =============== */
 
@@ -94,13 +103,13 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(252, 252, 250, 0); /* Lav opacitet */
+    background: rgba(252, 252, 250, 0); /* Lav opacitet*/
     z-index: 1000;
     backdrop-filter: blur(6px);
     padding: 10px 20px 0px 20px;
 }
 
-.nav table {
+.nav ul {
     margin: 0;
     padding-left: 580px;
     padding-right: 0;
@@ -108,7 +117,7 @@ p {
     justify-content: center;
 }
 
-.nav td {
+.nav li {
     font-family: aileron, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -117,7 +126,7 @@ p {
     letter-spacing: 1px;
 }
 
-.nav td a {
+.nav li a {
     display: block;
     display: grid;
     color: var(--black);
@@ -127,7 +136,7 @@ p {
     font-size: 16px;
 }
 
-.nav td a:hover {
+.nav li a:hover {
     font-family: "swear-display", serif;
     font-weight: 600;
     font-style: normal;
@@ -142,11 +151,17 @@ p {
     font-size: 10px;
 }
 
+
 .logo img {
     height: 80px;
     float: left;
-    padding-right: 20px;
+    padding-left: 15px;
 }
+
+@media screen and (max-width: 480px) {
+    
+}
+
 
 
 /* =============== HOMEPAGE =============== */
@@ -386,7 +401,7 @@ p {
 .about__tapeportrait {
     width: 400px;
     position: absolute; 
-    top: 17%px; 
+    top: 30%; 
     right: 9%; 
     z-index: 1;
     rotate: 26deg; 
@@ -463,7 +478,7 @@ td {
     border: 5px solid var(--blue);
     box-sizing: border-box; 
     padding: 6.5%;
-    padding-top: 9%;
+    padding-top: 11%;
     text-align: center;
     color: var(--blue);
     font-family: source-sans-pro, sans-serif;
@@ -505,6 +520,7 @@ td {
 .flip-container__back {
     transform: rotateY(180deg); 
     }
+
 
 /* Video og beskrivelse fritid */
 .about__hobby-title {
@@ -595,6 +611,53 @@ td {
     width: 6%;
     }
 
+    
+.about__totop-button {
+    position: absolute;
+    top: 520%;
+    left: 50%;
+    transform: translateX(-50%); /* Skubber knappen 50% tilbage for at centrere den korrekt */
+    margin-right: 10px;     
+    text-decoration: none;
+    padding: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    font-size: 15px;
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--white);
+    background: var(--blue);
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  /* "flydende" scroll */
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+
+  @media screen and (max-width: 480px) {
+    .about__tapeportrait {
+        width: 150px;
+        padding-top: 10%;
+    }
+
+    .about__arrow-text1 {
+        font-size: 100%;
+    }
+
+    .about__arrow-text2 {
+        font-size: 100%;
+    }
+
+    .about__video {
+        width: 50%;
+    }
+}
+
 
 /* =============== CONTACT PAGE =============== */
 
@@ -656,7 +719,6 @@ td {
   }
 
   .contact__image-odense img {
-    border-radius: 1%;
     z-index: 2;
   }
 
@@ -697,6 +759,40 @@ td {
     text-align: right;
   }
   
+  /* Responsivt layout til mobil */
+  @media screen and (max-width: 480px) {
+    .contact__title2 {
+        font-size: 300%;
+    }
+
+    .contact__introtext {
+        font-size: 110%;
+    }
+
+    .contact__info-text {
+        font-size: 110%;
+    }
+
+    .contact__adress-number, .contact__adress-city {
+        font-size: 110%;
+        padding-right: 3%;
+    }
+
+    .contact__image-odense img {
+        width: 60%;
+        padding-left: 45%;
+    }
+
+    .contact__image-odense--banner {
+        width: 50%;
+        padding-left: 20%;
+    }
+
+    .contact__logos img {
+        width: 20%;
+        padding-bottom: 40%;
+    }
+  }
 
 /* =============== PROJECT PAGE =============== */
   
@@ -806,29 +902,32 @@ td {
     margin-top: 100px;
   }
   
-  @media (max-width: 1200px) {
-    .column {
-      flex: 25%;
-      max-width: 25%;
-    }
-  }
+
   
-  /* Responsivt layout - to kolonner*/
-  @media (max-width: 800px) {
-    .column {
-      flex: 50%;
-      max-width: 50%;
-      margin-bottom: 0px;
-      break-inside: avoid;
+  @media (max-width: 480px) {
+
+    .projects__instagram--animation {
+        width: 125px;
+        height: 95px;
     }
+
+    .projects__column {
+        flex: 100%;
+        max-width: 100%;
+        padding: 0 30px; 
     }
-  
-  /* Responsivt layout - 1 kolonne */
-  @media (max-width: 600px) {
-    .column {
-      flex: 100%;
-      max-width: 100%;
-      break-inside: avoid;
+
+    .projects__column img {
+        width: 100%;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        filter: grayscale(0%);
+    }
+
+    .projects__cta {
+        font-size: 16px;
+        padding-left: 6%;
+        margin-top: 50px;
     }
   }
 
