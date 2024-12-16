@@ -94,75 +94,91 @@ p {
         font-size: 120%;
     }
 
+    h5 {
+        font-size: 80%;
+    }
+
 }
 
 /* =============== NAVIGATION BAR =============== */
 
-.nav {
+.navbar {
+    grid-area: menu;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(252, 252, 250, 0); /* Lav opacitet*/
+    justify-content: space-between;
+    background: rgba(252, 252, 250, 0);
     z-index: 1000;
     backdrop-filter: blur(6px);
-    padding: 10px 20px 0px 20px;
+    padding: 20px 20px 0px 20px;
 }
 
-.nav ul {
-    margin: 0;
-    padding-left: 580px;
-    padding-right: 0;
+.navbar__logo img {
+    height: 70px;
+    width: 70px;
+    padding-left: 15%;
+}
+
+.navbar__links {
     display: flex;
-    justify-content: center;
+    list-style-type: none;
 }
 
-.nav li {
+.navbar__menu {
+    display: flex;
+    margin-left: auto;
+    padding-right: 70px;
+}
+
+.navbar__menu-item {
     font-family: aileron, sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 15px;
     text-transform: uppercase;
     list-style: none;
     letter-spacing: 1px;
-}
-
-.nav li a {
-    display: block;
-    display: grid;
-    color: var(--black);
-    text-align: center;
-    padding: 18px 40px;
+    padding-left: 35px;
     text-decoration-line: underline;
-    font-size: 16px;
 }
 
-.nav li a:hover {
+.navbar__link {
+    color: var(--black);
+    text-decoration-line: none;
+    margin-left: 20px;
+}
+
+.navbar__menu-item:hover {
     font-family: "swear-display", serif;
     font-weight: 600;
     font-style: normal;
     text-transform: lowercase;
-    font-size: 21px;
-    color: var(--black);
+    font-size: 18px;
     text-decoration-line: none;
     transition: font-family 1.2s ease;
 }
 
-.nav_hover-text:hover {
-    font-size: 10px;
-}
+/* Responsiv - mobil */
+@media (max-width: 480px) {
+    
+    .navbar {
+        height: 100px;
+    }
+    
+    .navbar__logo img {
+        display: flex;
+        margin-bottom: 20px;
+    }
 
-
-.logo img {
-    height: 80px;
-    float: left;
-    padding-left: 15px;
-}
-
-@media screen and (max-width: 480px) {
+    .navbar__menu {
+        flex-direction: column; 
+        text-align: right;
+        line-height: 1.5;
+    }
     
 }
-
-
 
 /* =============== HOMEPAGE =============== */
 
@@ -364,10 +380,90 @@ p {
     }
 }
 
+
+/* Responsiv - mobil */
+
 @media screen and (max-width: 480px) {
-    .titel1 {
+    .grid-container {
+        display: grid;
+        grid-template-areas: 
+        'menu menu'
+        'main main'
+        'tekstboks tekstboks'
+        'billedeboks billedeboks'
+        'footer footer';
+        grid-template-columns: 5fr 3fr;
+        grid-template-rows: 100px 300px 300px 480px 290px;
+        height: 100vh;
+        grid-gap: 10px;  
+    }
+
+    .main {
+        padding-top: 25%;
+    }
+
+    .main__blob-innercontainer {
+        transform: scale(0.5) translateX(50%); 
+        min-width: 600px; 
+    }
+    
+    .main__blob {
+        width: 200vw;
+        height: 200vh;
+        filter: blur(80px);
+    }
+
+    .main__title-text {
         font-size: 400%;
     }
+
+    .main__title-changing-text {
+        font-size: 400%;
+    }
+
+    .tekstboks__intro {
+        font-size: 100%;
+        width: 35%;
+    }
+
+    .tekstboks__image {
+        width: 40%;
+        padding-top: 10%;
+    }
+
+    .billedeboks__carousel-container {
+        width: 100%;
+    }
+
+    .billedeboks__carousel img {
+        width: 95%;
+    }
+
+    .billedeboks__carousel {
+        display: flex;
+        animation: slide 11s infinite;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        20% {
+            transform: translateX(0);
+        }
+        40% {
+            transform: translateX(-100%);
+        }
+        60% {
+            transform: translateX(-200%);
+        }
+        80% {
+            transform: translateX(-300%);
+        }
+        100% {
+            transform: translateX(-400%);
+        }
+}
 }
 
 /* =============== ABOUT ME PAGE =============== */
@@ -401,7 +497,7 @@ p {
 .about__tapeportrait {
     width: 400px;
     position: absolute; 
-    top: 30%; 
+    top: 16%; 
     right: 9%; 
     z-index: 1;
     rotate: 26deg; 
@@ -614,7 +710,7 @@ td {
     
 .about__totop-button {
     position: absolute;
-    top: 520%;
+    top: 505%;
     left: 50%;
     transform: translateX(-50%); /* Skubber knappen 50% tilbage for at centrere den korrekt */
     margin-right: 10px;     
@@ -639,10 +735,19 @@ td {
     scroll-behavior: smooth;
   }
 
+
+  /* Responsiv - mobil */
+
   @media screen and (max-width: 480px) {
+
+    .about__title {
+        padding-top: 20%;
+    }
+
     .about__tapeportrait {
         width: 150px;
-        padding-top: 10%;
+        padding-top: 28%;
+        rotate: 15deg;
     }
 
     .about__arrow-text1 {
@@ -653,8 +758,83 @@ td {
         font-size: 100%;
     }
 
+    .about__hobby-text {
+        width: 50%;
+       }
+
     .about__video {
         width: 50%;
+        padding-top: 10%;
+        padding-left: 10%;
+    }
+
+    .about__trehurtige-title {
+        font-size: 200%;
+    }
+
+    .about__totop-button {
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .flip-container__back-text {
+    width: 120px;
+    height: 120px;
+    }
+
+    .about__flip-cards-flipper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .flip-container__front-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .flip-container__back-text {
+        font-size: 17%;
+    }
+
+    .about__rejsebilleder-content {
+        display: block;
+    }
+
+    .about__rejsebilleder-list {
+        padding: 0; 
+    }
+    
+   .about__rejsebilleder-content img {
+    width: 40%;
+    padding-left: 45%;
+    padding-top: 0%;
+   }
+
+   .about__rejsebilleder-item {
+    height: 60vh;
+   }
+
+   .about__inspiration-title {
+    padding-top: 15%;
+   }
+
+   .about__inspiration-text {
+    width: 50%;
+    padding-bottom: 0%;
+   }
+
+    .about__swipe-icon {
+    float: none; 
+    padding-left: 0;
+    padding-top: 130%;
+    position: relative;
+    }
+
+    .about__totop-button {
+        position: absolute;
+        top: 335%;
+        width: 20%;
+        font-size: 9px;
     }
 }
 
@@ -759,8 +939,14 @@ td {
     text-align: right;
   }
   
-  /* Responsivt layout til mobil */
+
+ /* Responsiv - mobil */
+
   @media screen and (max-width: 480px) {
+    .contact__subtitel {
+        padding-top: 15%;
+    }
+
     .contact__title2 {
         font-size: 300%;
     }
@@ -903,8 +1089,13 @@ td {
   }
   
 
+/* Responsiv - mobil */
   
   @media (max-width: 480px) {
+
+    .projects {
+        padding-top: 25%;
+    }
 
     .projects__instagram--animation {
         width: 125px;
@@ -914,7 +1105,7 @@ td {
     .projects__column {
         flex: 100%;
         max-width: 100%;
-        padding: 0 30px; 
+        padding: 0 15px; 
     }
 
     .projects__column img {
@@ -926,7 +1117,6 @@ td {
 
     .projects__cta {
         font-size: 16px;
-        padding-left: 6%;
         margin-top: 50px;
     }
   }
@@ -1018,7 +1208,7 @@ td {
     animation: rotate 3s linear infinite;
 }
 
-/* Animation som får gradient til at bevæge sig*/
+/* Animation som får gradienten til at bevæge sig*/
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -1129,32 +1319,88 @@ td {
 
 .skills__click--icon {
         float: left;
-        width: 10%;
+        width: 7%;
         z-index: 2;
         padding-top: 72%;
         position: absolute;
     }
 
+
+/* Responsiv - mobil */
+
     @media screen and (max-width: 480px) {
+        .skills__title {
+            padding-top: 20%;
+        }
+
         .skills__intro--text {
             font-size: 110%;
-            width: 70%;
+            width: 60%;
             padding-left: 14%;
         }
         
         .skills__image {
-            width: 80%;
+            width: 32%;
+            padding-top: 55%;
         }
 
         .skills__image2 {
-            width: 80%;
+            width: 32%;
         }
 
+        .skills__table {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 5%;
+            padding-bottom: 5%;
+        }
+    
+        .skills__table--cell {
+            font-size: 160%; 
+            padding: 5%;
+        }
+    
+        .competence-card__back {
+            padding: 10%;
+            padding-top: 20%;
+            font-size: 40%;
+        }
+    
+        .competence-card__front, .competence-card__back {
+            width: 120px;
+            height: 120px;
+        }
+    
+        .competence-card__front img {
+            width: 100%; 
+            height: auto;
+        }
+    
+        .competence-card__box {
+            width: 120px;
+            height: 120px;
+        }
+    
+        .competence-card__front,
+        .competence-card__back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    
+        .competence-card__front img:hover {
+            transform: scale(1.04);
+            filter: grayscale(0%);
+        }
+        
         .skills__click--icon {
             padding-top: 120%;
         }
 
     }
+
 /* =============== PROJECT SUBPAGES =============== */
 
 .project {
@@ -1168,6 +1414,7 @@ td {
 
 .project__description {
     padding-top: 15%;
+    padding-bottom: 40%;
 }
 
 .project__image {
@@ -1176,6 +1423,8 @@ td {
     padding-top: 1%;
     width: 40%;
 }
+
+/* Responsiv - mobil */
 
 
 /* =============== BLUE BUTTON =============== */
@@ -1215,6 +1464,14 @@ td {
     color: var(--blue);
   }
 
+
+@media screen and (max-width: 480px) {
+    .bluebutton {
+        width: 50%; 
+        padding: 8px 20px; 
+        font-size: 14px;
+    }
+}
 
 /* =============== RED BUTTON =============== */
 
@@ -1371,4 +1628,20 @@ td {
     font-style: normal;
     line-height: 29px;
     font-size: 110%;
+}
+
+/* Responsiv - mobil */
+
+@media screen and (max-width: 480px) {
+    .footer__banner {
+        font-size: 50px;
+    }
+
+    .footer__contact {
+        font-size: 80%;
+    }
+
+    .footer {
+        min-height: 200px;
+    }
 }
