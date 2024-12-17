@@ -8,198 +8,212 @@
       <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="https://use.typekit.net/gdy6gko.css">
     </head>
-            <body>
+    
+    <body>
+      <script>
+        window.addEventListener("blur", () =>{
+            document.title = "Kom tilbage <3"
+        })
+        window.addEventListener("focus", () =>{
+            document.title = "Om mig | Cebagraphics"
+        })
+    </script>              
 
-              <nav class="navbar">
-                <div class="navbar__links">
-                    <div class="navbar__logo">
-                        <a href="index.html">
-                            <img src="img/blaatlogo.png" alt="Logo" class="logo">
-                        </a>
+      <nav class="navbar">
+        <div class="navbar__links">
+            <div class="navbar__logo">
+                <a href="index.html">
+                    <img src="img/blaatlogo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__menu-item"><a href="projects.html" class="navbar__link">Projekter</a></li>
+                <li class="navbar__menu-item"><a href="skills.html" class="navbar__link">Kompetencer</a></li>
+                <li class="navbar__menu-item"><a href="about.html" class="navbar__link">Om mig</a></li>
+                <li class="navbar__menu-item"><a href="contact.html" class="navbar__link">Kontakt</a></li>
+            </ul>
+        </div>
+      </nav>
+
+      <section class="about">
+              <h1 class="about__title">HVEM ER<br>JEG?</h1>
+
+              <img class="about__tapeportrait" src="img/tape.png" alt="">
+              <div class="about__portraits">
+                  <img src="img/portrait(1).jpg" alt="Billede 1" class="active" id="image1">
+                  <img src="img/portrait.jpg" alt="Billede 2" id="image2">
+              </div>
+
+              <script>
+              document.querySelector('.about__portraits').addEventListener('click', function() {
+                document.getElementById('image1').classList.toggle('active');
+                document.getElementById('image2').classList.toggle('active');
+              });
+              </script>
+
+              <p class="about__intro-text">Hej med dig! Mit navn er Cecilie. Jeg er 21 år og studerer til multimediedesigner på UCL i Odense. Herunder kan du læse mere om, hvem jeg er og hvad jeg laver når jeg ikke er i fuld gang med studiet.</p>
+
+              <div class="about__arrow">
+                  <img src="img/arrowblue.png" alt="">
+              </div>
+
+              <h3 class="about__arrow-text1">Klik for</h3>
+
+              <h4 class="about__arrow-text2">et smil!</h4>
+
+              <div class="about__trehurtige">
+                  <h3 class="about__trehurtige-title">Tre hurtige</h3>
+                  <p class="about__trehurtige-text">Klik på kasserne herunder og afslør tre sjove facts om mig!</p>
+              </div>
+          
+           
+              <table class="about__flip-cards-table">
+              <tr>
+
+              <td>
+              <div class="about__flip-cards" onclick="this.classList.toggle('hover');">
+                  <div class="about__flip-cards-flipper">
+                    <div class="flip-container__front">
+                      <div class="flip-container__front-image">
+                          <img src="img/norge.jpg" alt="Norskflag">
+                      </div>
                     </div>
-                    <ul class="navbar__menu">
-                        <li class="navbar__menu-item"><a href="projects.html" class="navbar__link">Projekter</a></li>
-                        <li class="navbar__menu-item"><a href="skills.html" class="navbar__link">Kompetencer</a></li>
-                        <li class="navbar__menu-item"><a href="about.html" class="navbar__link">Om mig</a></li>
-                        <li class="navbar__menu-item"><a href="contact.html" class="navbar__link">Kontakt</a></li>
-                    </ul>
+                    <div class="flip-container__back">
+                      <div class="flip-container__back-text">Jeg er halv <b>nordmand</b> og tager ofte turen nordpå for at besøge min familie deroppe (derfor kan jeg også godt snakke norsk).</div>
+                    </div>
+                  </div>
                 </div>
-            </nav>
-        
+              </td>
 
-        <section class="about">
-                <h1 class="about__title">HVEM ER<br>JEG?</h1>
-
-                <img class="about__tapeportrait" src="img/tape.png" alt="">
-                <div class="about__portraits">
-                    <img src="img/portrait(1).jpg" alt="Billede 1" class="active" id="image1">
-                    <img src="img/portrait.jpg" alt="Billede 2" id="image2">
-                </div>
-
-                <script src="script.js"></script>
-
-                <p class="about__intro-text">Hej med dig! Mit navn er Cecilie. Jeg er 21 år og studerer til multimediedesigner på UCL i Odense. Herunder kan du læse mere om, hvem jeg er og hvad jeg laver når jeg ikke er i fuld gang med studiet.</p>
-
-                <div class="about__arrow">
-                    <img src="img/arrowblue.png" alt="">
-                </div>
-
-                <h3 class="about__arrow-text1">Klik for</h3>
-
-                <h4 class="about__arrow-text2">et smil!</h4>
-
-                <div class="about__trehurtige">
-                    <h3 class="about__trehurtige-title">Tre hurtige</h3>
-                    <p class="about__trehurtige-text">Klik på kasserne herunder og afslør tre sjove facts om mig!</p>
-                </div>
-            
-             
-                <table class="about__flip-cards-table">
-                <tr>
-
-                <td>
+              <td>
                 <div class="about__flip-cards" onclick="this.classList.toggle('hover');">
-                    <div class="about__flip-cards-flipper">
-                      <div class="flip-container__front">
-                        <div class="flip-container__front-image">
-                            <img src="img/norge.jpg" alt="Norskflag">
-                        </div>
-                      </div>
-                      <div class="flip-container__back">
-                        <div class="flip-container__back-text">Jeg er halv <b>nordmand</b> og tager ofte turen nordpå for at besøge min familie deroppe (derfor kan jeg også godt snakke norsk).</div>
+                  <div class="about__flip-cards-flipper">
+                    <div class="flip-container__front">
+                      <div class="flip-container__front-image">
+                          <img src="img/camino.jpg" alt="Caminoikon">
                       </div>
                     </div>
-                  </div>
-                </td>
-
-                <td>
-                  <div class="about__flip-cards" onclick="this.classList.toggle('hover');">
-                    <div class="about__flip-cards-flipper">
-                      <div class="flip-container__front">
-                        <div class="flip-container__front-image">
-                            <img src="img/camino.jpg" alt="Caminoikon">
-                        </div>
-                      </div>
-                      <div class="flip-container__back">
-                        <div class="flip-container__back-text">Jeg har været frivillig på et hostel på pilgrimsruten <b>"Caminoen"</b> i Spanien (og har også gået en del af den sammen med min kæreste).</div>
-                      </div>
+                    <div class="flip-container__back">
+                      <div class="flip-container__back-text">Jeg har været frivillig på et hostel på pilgrimsruten <b>"Caminoen"</b> i Spanien (og har også gået en del af den sammen med min kæreste).</div>
                     </div>
                   </div>
-                </td>
-
-                <td>
-                  <div class="about__flip-cards" onclick="this.classList.toggle('hover');">
-                    <div class="about__flip-cards-flipper">
-                      <div class="flip-container__front">
-                        <div class="flip-container__front-image">
-                            <img src="img/bryllupskage.jpg" alt="Bryllupskage">
-                        </div>
-                      </div>
-                      <div class="flip-container__back">
-                        <div class="flip-container__back-text">
-                            Jeg elsker at bage og for nogle år tilbage bagte jeg også en 4-etagers <b>bryllupskage</b> til min onkel og tantes bryllup.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                </tr>
-                </table>
-
-                <h1 class="about__hobby-title">HVAD LAVER<br>JEG?</h1>
-
-                <p class="about__hobby-text">
-                    Jeg har altid været draget af at skabe noget med mine hænder. Derfor ligger de også sjældent stille og jeg finder altid noget kreativt at gå igang med. I videoen hér til venstre kan du se nogle af de forskellig ting jeg foretager mig.
-                </p>
-
-                <div class="about__video-container">
-                <video class="about__video" controls loop autoplay muted>
-                    <source src="img/hobbies-video.mp4" type="video/mp4">
-                </video>
                 </div>
+              </td>
 
-                <h1 class="about__inspiration-title">HVOR FÅR JEG<br>INSPIRATION?</h1>
-                <p class="about__inspiration-text">
-                    Jeg elsker at rejse og det er også her jeg får meget af min inspiration. Ligemeget om det bare har været en forlænget weekend eller en længere rejse, så er min kamerulle altid fyldt helt op bagefter. Jeg har samlet nogle af mine ynglingsbilleder jeg har taget fra rundt i verden her til højre. Swipe og kom med mig på tur!
-                </p>
-
-                <div class="about_rejsebilleder">
-                <ul class="about__rejsebilleder-list">
-                    <li class="about__rejsebilleder-item"><div class="about__rejsebilleder-content"><img src="img/rejsegalleri/luftballon.jpg" alt="Luftballon"></div></li>
-
-                    <li class="about__rejsebilleder-item"><div class="about__rejsebilleder-content"><img src="img/rejsegalleri/budapest.jpeg" alt="Budapest"></div></li>
-
-                    <li class="about__rejsebilleder-item"><div class="about__rejsebilleder-content"><img src="img/rejsegalleri/hamborg.jpeg" alt="Hamborg"></div></li>
-
-                    <li class="about__rejsebilleder-item"><div class="about__rejsebilleder-content"><img src="img/rejsegalleri/kreta.jpg" alt="Kreta"></div></li>
-
-                    <li class="about__rejsebilleder-item"><div 
-                    class="about__rejsebilleder-content"><img src="img/rejsegalleri/malta.jpg" alt="Malta"></div></li>
-
-                    <li class="about__rejsebilleder-item"><div class="about__rejsebilleder-content"><img src="img/rejsegalleri/newyork.jpg" alt="New York"></div></li>
-
-                    <li class="about__rejsebilleder-item"><div 
-                    class="about__rejsebilleder-content"><img src="img/rejsegalleri/norge.jpg" alt="Norge"></div></li>
-
-                    <li class="about__rejsebilleder-item"><div 
-                    class="about__rejsebilleder-content"><img src="img/rejsegalleri/camino.jpg" alt="Camino"></div></li>
-
-                    <li class="about__rejsebilleder-item"><div 
-                    class="about__rejsebilleder-content"><img src="img/rejsegalleri/costarica.jpg" alt="Costarica"></div></li>
-
-                    <li class="about__rejsebilleder-item"><div 
-                    class="about__rejsebilleder-content"><img src="img/rejsegalleri/valladolid.jpg" alt="Valladolid"></div></li>
-
-                  </ul>
+              <td>
+                <div class="about__flip-cards" onclick="this.classList.toggle('hover');">
+                  <div class="about__flip-cards-flipper">
+                    <div class="flip-container__front">
+                      <div class="flip-container__front-image">
+                          <img src="img/bryllupskage.jpg" alt="Bryllupskage">
+                      </div>
+                    </div>
+                    <div class="flip-container__back">
+                      <div class="flip-container__back-text">
+                          Jeg elsker at bage og for nogle år tilbage bagte jeg også en 4-etagers <b>bryllupskage</b> til min onkel og tantes bryllup.
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </td>
+              </tr>
+              </table>
 
-                <img class="about__swipe-icon" src="img/swipe-left-kopi.svg" alt="">
+              <h1 class="about__hobby-title">HVAD LAVER<br>JEG?</h1>
 
-                <a href="#" class="about__totop-button">TILBAGE TIL TOPPEN &#8593;</a>
-            </section>
+              <p class="about__hobby-text">
+                  Jeg har altid været draget af at skabe noget med mine hænder. Derfor ligger de også sjældent stille og jeg finder altid noget kreativt at gå igang med. I videoen hér til venstre kan du se nogle af de forskellig ting jeg foretager mig.
+              </p>
 
+              <div class="about__video-container">
+              <video class="about__video" controls loop autoplay muted>
+                  <source src="img/hobbies-video.mp4" type="video/mp4">
+              </video>
+              </div>
 
-<footer class="footer">
-  <div class="footer__contact">
-      <div class="footer__menu">
-          <h5 class="footer__title">MENU</h5>
-          <ul class="footer__menu-list">
-              <li class="footer__menu-item"><a href="projects.html" class="footer__menu-link">Projekter</a></li>
-              <li class="footer__menu-item"><a href="skills.html" class="footer__menu-link">Kompetencer</a></li>
-              <li class="footer__menu-item"><a href="about.html" class="footer__menu-link">Om mig</a></li>
-              <li class="footer__menu-item"><a href="contact.html" class="footer__menu-link">Kontakt</a></li>
-          </ul>
-      </div>
+              <h1 class="about__inspiration-title">HVOR FÅR JEG<br>INSPIRATION?</h1>
+              <p class="about__inspiration-text">
+                  Jeg elsker at rejse og det er også her jeg får meget af min inspiration. Ligemeget om det bare har været en forlænget weekend eller en længere rejse, så er min kamerulle altid fyldt helt op bagefter. Jeg har samlet nogle af mine ynglingsbilleder jeg har taget fra rundt i verden her til højre. Swipe og kom med mig på tur!
+              </p>
 
-      <div class="footer__social">
-          <h5 class="footer__title">SOCIALT</h5>
-          <ul class="footer__social-list">
-              <li class="footer__social-item"><a href="https://www.instagram.com/cebagraphics/" target="_blank" class="footer__social-link">Instagram</a></li>
-              <li class="footer__social-item"><a href="https://github.com/cebagraphics" target="_blank" class="footer__social-link">Github</a></li>
-              <li class="footer__social-item"><a href="tel:+4560625531" class="footer__social-link">Telefon</a></li>
-              <li class="footer__social-item"><a href="mailto:ceciliebang03@gmail.com" target="_blank" class="footer__social-link">Mail</a></li>
-          </ul>
-      </div>
+              <div class="about_rejsebilleder">
+              <ul class="about__rejsebilleder-list">
+                  <li class="about__rejsebilleder-item"><div class="about__rejsebilleder-content"><img src="img/rejsegalleri/luftballon.jpg" alt="Luftballon"></div></li>
 
-      <div class="footer__location">
-          <h5 class="footer__title">LOKATION</h5>
-          <ul class="footer__location-list">
-              <li class="footer__location-item">
-                  <a href="https://maps.app.goo.gl/ran3Emsc5RQp35oEA" target="_blank" class="footer__location-link">
-                      Promenadebyen <br>
-                      30, 1, 5 <br>
-                      Odense C, <br>
-                      5000
-                  </a>
-              </li>
-          </ul>
-      </div>
-  </div>
+                  <li class="about__rejsebilleder-item"><div class="about__rejsebilleder-content"><img src="img/rejsegalleri/budapest.jpeg" alt="Budapest"></div></li>
 
-  <div class="footer__banner">
-      <span class="footer__banner-text">CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS</span>
-  </div>
-</footer>
+                  <li class="about__rejsebilleder-item"><div class="about__rejsebilleder-content"><img src="img/rejsegalleri/hamborg.jpeg" alt="Hamborg"></div></li>
 
-            </body>
-</html>
+                  <li class="about__rejsebilleder-item"><div class="about__rejsebilleder-content"><img src="img/rejsegalleri/kreta.jpg" alt="Kreta"></div></li>
+
+                  <li class="about__rejsebilleder-item"><div 
+                  class="about__rejsebilleder-content"><img src="img/rejsegalleri/malta.jpg" alt="Malta"></div></li>
+
+                  <li class="about__rejsebilleder-item"><div class="about__rejsebilleder-content"><img src="img/rejsegalleri/newyork.jpg" alt="New York"></div></li>
+
+                  <li class="about__rejsebilleder-item"><div 
+                  class="about__rejsebilleder-content"><img src="img/rejsegalleri/norge.jpg" alt="Norge"></div></li>
+
+                  <li class="about__rejsebilleder-item"><div 
+                  class="about__rejsebilleder-content"><img src="img/rejsegalleri/camino.jpg" alt="Camino"></div></li>
+
+                  <li class="about__rejsebilleder-item"><div 
+                  class="about__rejsebilleder-content"><img src="img/rejsegalleri/costarica.jpg" alt="Costarica"></div></li>
+
+                  <li class="about__rejsebilleder-item"><div 
+                  class="about__rejsebilleder-content"><img src="img/rejsegalleri/valladolid.jpg" alt="Valladolid"></div></li>
+
+                </ul>
+              </div>
+
+              <img class="about__swipe-icon" src="img/swipe-left-kopi.svg" alt="">
+
+              <a href="#" class="about__totop-button">TILBAGE TIL TOPPEN &#8593;</a>
+          </section>
+      
+      
+      
+      <footer class="footer">
+        <div class="footer__contact">
+            <div class="footer__menu">
+                <h5 class="footer__title">MENU</h5>
+                <ul class="footer__menu-list">
+                    <li class="footer__menu-item"><a href="projects.html" class="footer__menu-link">Projekter</a></li>
+                    <li class="footer__menu-item"><a href="skills.html" class="footer__menu-link">Kompetencer</a></li>
+                    <li class="footer__menu-item"><a href="about.html" class="footer__menu-link">Om mig</a></li>
+                    <li class="footer__menu-item"><a href="contact.html" class="footer__menu-link">Kontakt</a></li>
+                </ul>
+            </div>
+      
+            <div class="footer__social">
+                <h5 class="footer__title">SOCIALT</h5>
+                <ul class="footer__social-list">
+                    <li class="footer__social-item"><a href="https://www.instagram.com/cebagraphics/" target="_blank" class="footer__social-link">Instagram</a></li>
+                    <li class="footer__social-item"><a href="https://github.com/cebagraphics" target="_blank" class="footer__social-link">Github</a></li>
+                    <li class="footer__social-item"><a href="tel:+4560625531" class="footer__social-link">Telefon</a></li>
+                    <li class="footer__social-item"><a href="mailto:ceciliebang03@gmail.com" target="_blank" class="footer__social-link">Mail</a></li>
+                </ul>
+            </div>
+      
+            <div class="footer__location">
+                <h5 class="footer__title">LOKATION</h5>
+                <ul class="footer__location-list">
+                    <li class="footer__location-item">
+                        <a href="https://maps.app.goo.gl/ran3Emsc5RQp35oEA" target="_blank" class="footer__location-link">
+                            Promenadebyen <br>
+                            30, 1, 5 <br>
+                            Odense C, <br>
+                            5000
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      
+        <div class="footer__banner">
+            <span class="footer__banner-text">CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS</span>
+        </div>
+      </footer>
+      
+                  </body>
+      </html>

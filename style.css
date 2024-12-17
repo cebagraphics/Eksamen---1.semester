@@ -20,6 +20,19 @@ body {
     margin: 0;
 }
 
+/* Virker i Chrome - Edge - Firefox */
+  ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background-color: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 8px;
+}
+
+
 h1 {
     font-family: aileron, sans-serif;
     font-weight: 600;
@@ -484,6 +497,7 @@ p {
     float: right;
     padding: 7% 7% 2% 7%;
     display: none; 
+    cursor: pointer;
     }
       
 .about__portraits img.active {
@@ -611,6 +625,7 @@ td {
 .flip-container__front {
     z-index: 2;
     transform: rotateY(0deg); 
+    cursor: pointer;
     }
 
 .flip-container__back {
@@ -770,11 +785,6 @@ td {
 
     .about__trehurtige-title {
         font-size: 200%;
-    }
-
-    .about__totop-button {
-        position: relative;
-        margin-top: 10px;
     }
 
     .flip-container__back-text {
@@ -1025,6 +1035,7 @@ td {
   .projects__column img:hover {
     transform: scale(1.03);
     filter: grayscale(0%); /* Fjern sort/hvid filter ved hover */
+    cursor: pointer;
   }
 
 /* Høj billedekasse */
@@ -1233,6 +1244,7 @@ td {
     width: 220px;
     height: 220px;
     filter: grayscale(100%);
+    cursor: pointer;
 }
 
 .competence-card__front {
@@ -1325,6 +1337,27 @@ td {
         position: absolute;
     }
 
+.skills__totop-button {
+    position: absolute;
+    top: 275%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: 10px;     
+    text-decoration: none;
+    padding: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    font-size: 15px;
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--white);
+    background: var(--blue);
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
 
 /* Responsiv - mobil */
 
@@ -1399,6 +1432,12 @@ td {
             padding-top: 120%;
         }
 
+        .skills__totop-button {
+            position: absolute;
+            top: 240%;
+            width: 20%;
+            font-size: 9px;
+        }
     }
 
 /* =============== PROJECT SUBPAGES =============== */
@@ -1499,6 +1538,7 @@ td {
   }
 
 
+/* Responsiv - mobil */
 @media screen and (max-width: 480px) {
     .bluebutton {
         width: 50%; 
@@ -1506,21 +1546,6 @@ td {
         font-size: 14px;
     }
 }
-
-
-/* =============== MEDIA QUERY =============== 
-
-  @media only screen and (min-width: 550px) {
-    display: grid;
-    grid-template-areas: 
-    'menu menu'
-    'main main'
-    'footer footer';
-    grid-gap: 10px;
-    padding: 10px; 
-    }
-}
-*/
 
 /* =============== FOOTER =============== */
 
@@ -1596,6 +1621,7 @@ td {
 .footer__social a:hover {
     color: var(--red);
     text-decoration: underline;
+    font-weight: 500;
 }
 
 
@@ -1612,6 +1638,7 @@ td {
 .footer__menu a:hover {
     color: var(--red);
     text-decoration: underline;
+    font-weight: 500;
 }
 
 
@@ -1627,6 +1654,7 @@ td {
 .footer__location a:hover {
     color: var(--red);
     text-decoration: underline;
+    font-weight: 500;
 }
 
 .footer__location:active {

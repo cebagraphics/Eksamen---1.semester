@@ -11,6 +11,15 @@
 
 <body>
 
+  <script>
+    window.addEventListener("blur", () =>{
+        document.title = "Kom tilbage <3"
+    })
+    window.addEventListener("focus", () =>{
+        document.title = "Kompetencer | Cebagraphics"
+    })
+</script>
+
   <nav class="navbar">
     <div class="navbar__links">
         <div class="navbar__logo">
@@ -70,7 +79,7 @@
                                       <div class="competence-card__flipper" onclick="this.classList.toggle('hover');">
                                         <div class="competence-card__box">
                                           <div class="competence-card__front">
-                                            <div> <img src="img/ikoner/visual-studio.png" alt="Visual Studio"></div>
+                                            <div><img src="img/ikoner/visual-studio.png" alt="Visual Studio"></div>
                                           </div>
                                           <div class="competence-card__back">
                                                 I VS Code kan jeg kode simpel html og css. 
@@ -216,6 +225,8 @@
                           </ul>
                       </div>
                   </div>
+
+                  <a href="#" class="skills__totop-button">TILBAGE TIL TOPPEN &#8593;</a>
               
                   <div class="footer__banner">
                       <span class="footer__banner-text">CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS&#10035;CEBAGRAPHICS</span>
