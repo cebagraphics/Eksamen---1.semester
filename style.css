@@ -20,7 +20,7 @@ body {
     margin: 0;
 }
 
-/* Virker i Chrome - Edge - Firefox */
+/* Scrollbar - Virker i Chrome - Edge - Firefox */
   ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
@@ -493,7 +493,7 @@ p {
       
 .about__portraits img {
     width: 35%;
-    rotate: 7deg;
+    transform: rotate(7deg);
     float: right;
     padding: 7% 7% 2% 7%;
     display: none; 
@@ -502,7 +502,7 @@ p {
       
 .about__portraits img.active {
     width: 35%;
-    rotate: 7deg;
+    transform: rotate(7deg);
     float: right;
     padding: 7% 7% 2% 7%;
     display: block; 
@@ -514,7 +514,7 @@ p {
     top: 16%; 
     right: 9%; 
     z-index: 1;
-    rotate: 26deg; 
+    transform: rotate(26deg);
     }
 
 
@@ -732,7 +732,7 @@ td {
     position: absolute;
     top: 505%;
     left: 50%;
-    transform: translateX(-50%); /* Skubber knappen 50% tilbage for at centrere den korrekt */
+    transform: translateX(-50%);
     margin-right: 10px;     
     text-decoration: none;
     padding: 12px;
@@ -767,7 +767,7 @@ td {
     .about__tapeportrait {
         width: 150px;
         padding-top: 28%;
-        rotate: 15deg;
+        transform: rotate(20deg);
     }
 
     .about__arrow-text1 {
@@ -1167,7 +1167,7 @@ td {
     z-index: -5;
     left: 0;
     top: 200%;
-    rotate: 180deg;
+    transform: rotate(180deg);
     position: absolute;
 }
 
@@ -1191,7 +1191,6 @@ td {
 /* Bagsiden af ikonerne */
 .competence-card__back {
     position: relative;
-    background-color: var(--white);
     border: 1px solid var(--black);
     width: 220px;
     height: 220px;
@@ -1239,7 +1238,7 @@ td {
 }
 
 @property --angle {
-    syntax: "<angle>";
+    syntax: '<angle>';
     initial-value: 0deg;
     inherits: false;
 }
@@ -1452,12 +1451,12 @@ td {
     width: 50%;
 }
 
-.project h4,p,button {
+.project h4,p,.project__button--red {
     margin-left: 8%;
 }
 
 .project__description {
-    padding-top: 15%;
+    padding-top: 10%;
     padding-bottom: 40%;
 }
 
@@ -1501,6 +1500,29 @@ td {
   
   .project__button--red:hover {
     background-color: var(--red);
+    border: 2px solid var(--white);
+    color: var(--white);
+  }
+
+  .button_back {
+    background-color: var(--blue);
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 15px;
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: aileron, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-left: 4%;
+  }
+
+  .button_back:hover {
+    background-color: var(--blue);
     border: 2px solid var(--white);
     color: var(--white);
   }
