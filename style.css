@@ -697,6 +697,11 @@ td {
     width: 500px;
     }
 
+    /* skjuler horisontal scroll bar*/
+    .about__rejsebilleder-list::-webkit-scrollbar {
+        display: none;
+      }
+
 .about__rejsebilleder-item {
     flex-shrink: 0;
     width: 100%;
